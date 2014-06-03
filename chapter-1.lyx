@@ -413,8 +413,87 @@ So, for the discontinuity at
 
 \begin_layout Standard
 \begin_inset Formula 
+\begin{equation}
+\Delta\frac{\partial}{\partial\alpha}\Psi(\alpha=0)=4c\Psi(\alpha=0)\label{eq:discontinuity}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assuming the wavefunction:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
 \[
-\Delta\frac{\partial}{\partial\alpha}\Psi(\alpha=0)=4c\Psi(\alpha=0)
+\Psi(x_{1},x_{2})=\begin{cases}
+A_{+}e^{i(k_{1}x_{1}+k_{2}x_{2})}+A_{-}e^{i(k_{1}x_{2}+k_{2}x_{1})} & x_{1}<x_{2}\\
+A_{-}e^{i(k_{1}x_{1}+k_{2}x_{2})}+A_{+}e^{i(k_{1}x_{2}+k_{2}x_{1})} & x_{1}>x_{2}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and solving (1.1) we find:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A_{+}=e^{-\frac{i}{2}\phi(k_{1}-k_{2})},\qquad\qquad A_{-}=-e^{\frac{i}{2}\phi(k_{1}-k_{2})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi(k)=2\arctan\frac{k}{c}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+is known as the
+\shape italic
+ scattering phase shift
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+Now, if we impose periodic boundary conditions 
+\begin_inset Formula $\Psi(x,0)=\Psi(x,L)$
+\end_inset
+
+, where 
+\begin_inset Formula $L$
+\end_inset
+
+ is the system length, we find a quantization for the momenta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{ik_{1}L}=e^{-i\phi(k_{1}-k_{2})},\qquad\qquad e^{ik_{2}L}=-e^{-i\phi(k_{2}-k_{1})}
 \]
 
 \end_inset
