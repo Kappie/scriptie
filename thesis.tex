@@ -1,0 +1,207 @@
+%% LyX 2.0.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,a4paper,english,intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn]{scrbook}
+\usepackage{lmodern}
+\renewcommand{\sfdefault}{lmss}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setcounter{secnumdepth}{3}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{babel}
+\usepackage{calc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{nomencl}
+% the following is useful when we have the old nomencl.sty package
+\providecommand{\printnomenclature}{\printglossary}
+\providecommand{\makenomenclature}{\makeglossary}
+\makenomenclature
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,
+ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+\newcommand{\noun}[1]{\textsc{#1}}
+
+\@ifundefined{date}{}{\date{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% increase link area for cross-references and autoname them
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\newlength{\abc}
+\settowidth{\abc}{\space}
+\AtBeginDocument{%
+\addto\extrasenglish{
+ \renewcommand{\equationautorefname}{\hspace{-\abc}}
+ \renewcommand{\sectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsubsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\figureautorefname}{Fig.\negthinspace}
+ \renewcommand{\tableautorefname}{Tab.\negthinspace}
+}
+}
+
+% in case somebody want to have the label "equation"
+%\renewcommand{\eqref}[1]{equation~(\negthinspace\autoref{#1})}
+
+% that links to image floats jumps to the beginning
+% of the float and not to its caption
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a pdf-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% make caption labels bold
+\setkomafont{captionlabel}{\bfseries}
+\setcapindent{1em}
+
+% enable calculations
+\usepackage{calc}
+
+% fancy page header/footer settings
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+% increase the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoid that floats are placed above its sections
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+\makeatother
+
+\begin{document}
+
+
+
+\subject{Thesis to get the degree of a doctor of philosophy}
+
+
+\title{Title of the thesis}
+
+
+\subtitle{Subtitle (if you have one)}
+
+
+\author{Your name}
+
+
+\date{Date (optional)}
+
+
+\publishers{%
+\framebox{\begin{minipage}[t]{0.4\columnwidth}%
+Replace this box e.\,g.~by the coat of arms of the university.%
+\end{minipage}}\vspace{\baselineskip}\\
+Bla bla University Testburg\\
+Faculty for leading edge science\\
+Institute for \noun{Nobel} price winning research\vspace{-3cm}
+}
+
+
+\lowertitleback{\textbf{Dean}\smallskip{}
+\\
+Prof. Dr. xxx yyy\bigskip{}
+\\
+\textbf{Referees}\smallskip{}
+\\
+Prof. Dr. aaa bbb\smallskip{}
+\\
+Prof. Dr. xxx yyy\bigskip{}
+\\
+\textbf{Date of the graduation (optional)}\smallskip{}
+\\
+xx.yy.zzzz}
+
+
+\dedication{Dedication, cite from a famous person, or whatever you like (optional)}
+
+\maketitle
+\cleardoublepage{}
+
+
+\lhead{\rightmark}
+
+
+\rhead[\leftmark]{}
+
+
+\lfoot[\thepage]{}
+
+
+\cfoot{}
+
+
+\rfoot[]{\thepage}
+
+\tableofcontents{}
+
+\cleardoublepage{}
+
+\pagestyle{plain}
+
+\include{Summary}
+
+\cleardoublepage{}
+
+\pagestyle{fancy}
+
+
+\lhead[\chaptername~\thechapter]{\rightmark}
+
+\include{chapter-1}
+
+\include{chapter-2}
+
+\cleardoublepage{}
+
+
+\lhead[]{Acknowledgments}
+
+
+\rhead[Acknowledgments]{}
+
+\include{Acknowledgments}
+
+\appendix
+\include{Appendix}
+
+\cleardoublepage{}
+
+
+\lhead[]{\rightmark}
+
+
+\rhead[\leftmark]{}
+
+\bibliographystyle{alpha}
+\bibliography{thesisExample}
+
+
+\cleardoublepage{}
+
+
+\lhead[]{Nomenclature}
+
+
+\rhead[Nomenclature]{}
+
+\printnomenclature[2.5cm]{}
+\end{document}
