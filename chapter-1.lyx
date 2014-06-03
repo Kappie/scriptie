@@ -328,16 +328,101 @@ Here
 \begin_inset Formula $H\Psi=E\Psi$
 \end_inset
 
+, and integrate both sides from 
+\begin_inset Formula $-\epsilon$
+\end_inset
+
+ to 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ in 
+\begin_inset Formula $\alpha$
+\end_inset
+
 , we get:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
+-\frac{1}{2}\int_{-\epsilon}^{\epsilon}d\alpha(\frac{\partial^{2}}{\partial\alpha^{2}}+\frac{\partial^{2}}{\partial\beta^{2}})\Psi+2c\int_{-\epsilon}^{\epsilon}d\alpha\delta(\alpha)\Psi=\int_{-\epsilon}^{\epsilon}d\alpha E\Psi
 \]
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+Now, taking the limit 
+\begin_inset Formula $\epsilon\rightarrow0$
+\end_inset
+
+, the right side becomes zero, and we see:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{\epsilon\rightarrow0}-\frac{1}{2}\int_{-\epsilon}^{\epsilon}d\alpha(\frac{\partial^{2}}{\partial\alpha^{2}}+\frac{\partial^{2}}{\partial\beta^{2}})\Psi+2c\int_{-\epsilon}^{\epsilon}d\alpha\delta(\alpha)\Psi=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From which it follows that:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{\epsilon\rightarrow0}4c\int_{-\epsilon}^{\epsilon}d\alpha\delta(\alpha)\Psi=4c\Psi(\alpha=0)=\lim_{\epsilon\rightarrow0}\int_{-\epsilon}^{\epsilon}d\alpha(\frac{\partial^{2}}{\partial\alpha^{2}}+\frac{\partial^{2}}{\partial\beta^{2}})\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\lim_{\epsilon\rightarrow0}\frac{\partial}{\partial\alpha}\Psi(\alpha=\epsilon)-\frac{\partial}{\partial\alpha}\Psi(\alpha=-\epsilon)=\Delta\frac{\partial}{\partial\alpha}\Psi(\alpha=0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, for the discontinuity at 
+\begin_inset Formula $x_{1}=x_{2}$
+\end_inset
+
+ (
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+) we have:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta\frac{\partial}{\partial\alpha}\Psi(\alpha=0)=4c\Psi(\alpha=0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 

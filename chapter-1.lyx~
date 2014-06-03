@@ -299,14 +299,88 @@ H=-\sum_{i=1}^{N}\frac{\partial^{2}}{\partial x_{i}^{2}}+2c\sum_{i<j}\delta(x_{i
 \end_layout
 
 \begin_layout Standard
-Let's start with the one particle case.
+Let's start with the two particle case.
  We get:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-H=
+H=-\frac{\partial^{2}}{\partial x_{1}^{2}}-\frac{\partial^{2}}{\partial x_{2}^{2}}+2c\delta(x_{1}-x_{2})=-\frac{1}{2}(\frac{\partial^{2}}{\partial\alpha^{2}}+\frac{\partial^{2}}{\partial\beta^{2}})+2c\delta(\alpha)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here 
+\begin_inset Formula $\alpha=x_{1}-x_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta=x_{1}+x_{2}$
+\end_inset
+
+.
+ If we substitute this into 
+\begin_inset Formula $H\Psi=E\Psi$
+\end_inset
+
+, and integrate both sides from 
+\begin_inset Formula $-\epsilon$
+\end_inset
+
+ to 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ in 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, we get:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\frac{1}{2}\int_{-\epsilon}^{\epsilon}d\alpha(\frac{\partial^{2}}{\partial\alpha^{2}}+\frac{\partial^{2}}{\partial\beta^{2}})\Psi+2c\int_{-\epsilon}^{\epsilon}d\alpha\delta(\alpha)\Psi=\int_{-\epsilon}^{\epsilon}d\alpha E\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, taking the limit 
+\begin_inset Formula $\epsilon\rightarrow0$
+\end_inset
+
+, the right side becomes zero, and we see:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{\epsilon\rightarrow0}-\frac{1}{2}\int_{-\epsilon}^{\epsilon}d\alpha(\frac{\partial^{2}}{\partial\alpha^{2}}+\frac{\partial^{2}}{\partial\beta^{2}})\Psi+2c\int_{-\epsilon}^{\epsilon}d\alpha\delta(\alpha)\Psi=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From which it follows that:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{\epsilon\rightarrow0}4c\int_{-\epsilon}^{\epsilon}d\alpha\delta(\alpha)\Psi=4c\Psi(\alpha=0)=\lim_{\epsilon\rightarrow0}\int_{-\epsilon}^{\epsilon}d\alpha(\frac{\partial^{2}}{\partial\alpha^{2}}+\frac{\partial^{2}}{\partial\beta^{2}})\Psi=\lim_{\epsilon\rightarrow0}\frac{\partial}{\partial\alpha}\Psi(\alpha=\epsilon)-\frac{\partial}{\partial\alpha}\Psi(\alpha=-\epsilon)
 \]
 
 \end_inset
