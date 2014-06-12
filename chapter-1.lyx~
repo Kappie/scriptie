@@ -617,6 +617,19 @@ Solution for general N
 \end_layout
 
 \begin_layout Standard
+TODO:
+\end_layout
+
+\begin_layout Standard
+- Why do we make the Bethe Ansatz?
+\end_layout
+
+\begin_layout Standard
+- Why do we assume a superposition of plane waves? - Why do we only consider
+ one ordering of the particles?
+\end_layout
+
+\begin_layout Standard
 Our assumption for the wavefunction is 
 \end_layout
 
@@ -656,7 +669,7 @@ uity in the derivate of
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Psi(x_{1},\dots,x_{N})=\prod_{N\geq j>k\geq1}sgn(x_{j}-x_{k})\times\sum_{P_{N}}(-1)^{[P]}
+\Psi(x_{1},\dots,x_{N})=\prod_{N\geq j>k\geq1}sgn(x_{j}-x_{k})\times\sum_{P_{N}}(-1)^{[P]}e^{i\sum_{j=1}^{N}k_{P_{j}}x_{j}+\frac{i}{2}\sum_{N\geq j>k\geq1}sgn(x_{j}-x_{k})\phi(k_{P_{j}}-k_{P_{k}})}
 \]
 
 \end_inset
@@ -734,18 +747,7 @@ The energy and the total momentum generalize as follows:
 \begin_layout Standard
 \begin_inset Formula 
 \[
-E=\sum_{j=1}^{N}k_{j}^{2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-P=\sum_{j=1}^{N}k_{j}
+E=\sum_{j=1}^{N}k_{j}^{2},\qquad\qquad P=\sum_{j=1}^{N}k_{j}
 \]
 
 \end_inset
