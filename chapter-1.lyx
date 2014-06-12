@@ -298,6 +298,10 @@ H=-\sum_{i=1}^{N}\frac{\partial^{2}}{\partial x_{i}^{2}}+2c\sum_{i<j}\delta(x_{i
 
 \end_layout
 
+\begin_layout Subsection*
+The two particle case
+\end_layout
+
 \begin_layout Standard
 Let's start with the two particle case.
  We get:
@@ -430,8 +434,8 @@ Assuming the wavefunction:
 \begin_inset Formula 
 \[
 \Psi(x_{1},x_{2})=\begin{cases}
-A_{+}e^{i(k_{1}x_{1}+k_{2}x_{2})}+A_{-}e^{i(k_{1}x_{2}+k_{2}x_{1})} & x_{1}<x_{2}\\
-A_{-}e^{i(k_{1}x_{1}+k_{2}x_{2})}+A_{+}e^{i(k_{1}x_{2}+k_{2}x_{1})} & x_{1}>x_{2}
+A_{+}e^{i(k_{1}x_{1}+k_{2}x_{2})}+A_{-}e^{i(k_{2}x_{1}+k_{1}x_{2})} & x_{1}<x_{2}\\
+A_{-}e^{i(k_{1}x_{1}+k_{2}x_{2})}+A_{+}e^{i(k_{2}x_{1}+k_{1}x_{2})} & x_{1}>x_{2}
 \end{cases}
 \]
 
@@ -441,7 +445,11 @@ A_{-}e^{i(k_{1}x_{1}+k_{2}x_{2})}+A_{+}e^{i(k_{1}x_{2}+k_{2}x_{1})} & x_{1}>x_{2
 \end_layout
 
 \begin_layout Standard
-and solving (1.1) we find:
+and solving 
+\begin_inset Formula $\ref{eq:discontinuity}$
+\end_inset
+
+ we find:
 \end_layout
 
 \begin_layout Standard
@@ -461,9 +469,9 @@ where
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\phi(k)=2\arctan\frac{k}{c}
-\]
+\begin{equation}
+\phi(k)=2\arctan\frac{k}{c}\label{eq:scattering_phase_shift}
+\end{equation}
 
 \end_inset
 
@@ -483,7 +491,7 @@ Now, if we impose periodic boundary conditions
 \begin_inset Formula $\Psi(x,0)=\Psi(x,L)$
 \end_inset
 
-, where 
+ (this also assumes a symmetric wavefunction), where 
 \begin_inset Formula $L$
 \end_inset
 
@@ -502,7 +510,332 @@ e^{ik_{1}L}=e^{-i\phi(k_{1}-k_{2})},\qquad\qquad e^{ik_{2}L}=-e^{-i\phi(k_{2}-k_
 \end_layout
 
 \begin_layout Standard
+The above equations are the Bethe equations for two particles.
+ Let's do a sanity check.
+ In the limit 
+\begin_inset Formula $c\rightarrow0$
+\end_inset
 
+, we get:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{ik_{1}L}=e^{ik_{2}L}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Which leads to the momentum quantization for particles on a ring of length
+ L without interaction:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k_{1}L=2\pi n_{1},\qquad\qquad k_{2}L=2\pi n_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ are integers.
+\end_layout
+
+\begin_layout Standard
+Let's compute the energy and momentum of an eigenstate, that is labeled
+ by a set 
+\begin_inset Formula $\{k_{j}\}.$
+\end_inset
+
+ For the energy, we compute 
+\begin_inset Formula $H\Psi|_{x_{1}<x_{2}}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H\Psi=(-\frac{\partial^{2}}{\partial x_{1}^{2}}-\frac{\partial^{2}}{\partial x_{2}^{2}})(A_{+}e^{i(k_{1}x_{1}+k_{2}x_{2})}+A_{-}e^{i(k_{2}x_{1}+k_{1}x_{2})})=(k_{1}^{2}+k_{2}^{2})\Psi=E\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For the total momentum, we compute the eigenvalue of the momentum operator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{P}=-i\sum_{j=1}^{N}\frac{\partial}{\partial x_{j}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{P}\Psi=-i(\frac{\partial}{\partial x_{1}}+\frac{\partial}{\partial x_{2}})(A_{+}e^{i(k_{1}x_{1}+k_{2}x_{2})}+A_{-}e^{i(k_{2}x_{1}+k_{1}x_{2})})=(k_{1}+k_{2})\Psi=P\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Solution for general N
+\end_layout
+
+\begin_layout Standard
+Our assumption for the wavefunction is 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mbox{\ensuremath{\Psi(x_{1},\dots,x_{N}|k_{1},\dots,k_{N})_{x_{1}<x_{2}<\dots<x_{N}}=\sum_{P_{N}}A_{P}e^{i\sum_{j=1}^{N}k_{P_{j}}x_{j}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, 
+\begin_inset Formula $P_{N}$
+\end_inset
+
+ denotes the permutations of the set of 
+\begin_inset Formula $N$
+\end_inset
+
+ integers.
+ The 
+\begin_inset Formula $A_{P}$
+\end_inset
+
+ can be derived in the same way as the two particle case (by using the discontin
+uity in the derivate of 
+\begin_inset Formula $\Psi$
+\end_inset
+
+.) The complete expression is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Psi(x_{1},\dots,x_{N})=\prod_{N\geq j>k\geq1}sgn(x_{j}-x_{k})\times\sum_{P_{N}}(-1)^{[P]}e^{i\sum_{j=1}^{N}k_{P_{j}}x_{j}+\frac{i}{2}\sum_{N\geq j>k\geq1}sgn(x_{j}-x_{k})\phi(k_{P_{j}}-k_{P_{k}})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The periodicity conditions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Psi(0,x_{2},\dots,x_{N}|k_{1},\dots,k_{N})=\Psi(x_{2},\dots,x_{N},L|k_{1},\dots,k_{N})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lead to the Bethe equations for general N:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{ik_{j}L}=(-1)^{N-1}e^{-i\sum_{l\neq j}\phi(k_{j}-k_{l})}\qquad j=1,\dots,N
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Which are more conveniently expressed in the log form:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k_{j}L=2\pi I_{j}-\sum_{l=1}^{N}\phi(k_{j}-k_{l})\qquad j=1,\dots,N\label{eq:logform}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where the 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+ are integers when 
+\begin_inset Formula $N$
+\end_inset
+
+ is odd and half-integers when 
+\begin_inset Formula $N$
+\end_inset
+
+ is even.
+ This is easily checked by taking the natural logarithm on both sides of
+ the Bethe equations.
+\end_layout
+
+\begin_layout Standard
+The energy and the total momentum generalize as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E=\sum_{j=1}^{N}k_{j}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P=\sum_{j=1}^{N}k_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The total momentum can be expressed nicely in terms of 
+\begin_inset Formula $I_{j}.$
+\end_inset
+
+ 
+\begin_inset Formula $\ref{eq:logform}$
+\end_inset
+
+ divided by L gives us:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k_{j}=\frac{1}{L}(2\pi I_{j}-\sum_{l=1}^{N}\phi(k_{j}-k_{l}))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, summing over 
+\begin_inset Formula $j$
+\end_inset
+
+ gives us the total momentum:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P=\sum_{j=1}^{N}k_{j}=\frac{1}{L}\sum_{j=1}^{N}(2\pi I_{j}-\sum_{l=1}^{N}2\arctan\frac{k_{j}-k_{l}}{c})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, I used 
+\begin_inset Formula $\ref{eq:scattering_phase_shift}$
+\end_inset
+
+, the definition of the scattering phase shift.
+ But because 
+\begin_inset Formula $\arctan-x=-\arctan x$
+\end_inset
+
+, the double sum over the scattering phase shifts gives zero.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{j=1}^{N}\sum_{l=1}^{N}2\arctan\frac{k_{j}-k_{l}}{c}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And we are left with:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P=\frac{2\pi}{L}\sum_{j=1}^{N}I_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+The ground state
 \end_layout
 
 \begin_layout Standard
