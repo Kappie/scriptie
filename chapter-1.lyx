@@ -668,9 +668,9 @@ uity in the derivate of
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\Psi(x_{1},\dots,x_{N})=\prod_{N\geq j>k\geq1}sgn(x_{j}-x_{k})\times\sum_{P_{N}}(-1)^{[P]}e^{i\sum_{j=1}^{N}k_{P_{j}}x_{j}+\frac{i}{2}\sum_{N\geq j>k\geq1}sgn(x_{j}-x_{k})\phi(k_{P_{j}}-k_{P_{k}})}
-\]
+\begin{equation}
+\Psi(x_{1},\dots,x_{N})=\prod_{N\geq j>k\geq1}sgn(x_{j}-x_{k})\times\sum_{P_{N}}(-1)^{[P]}e^{i\sum_{j=1}^{N}k_{P_{j}}x_{j}+\frac{i}{2}\sum_{N\geq j>k\geq1}sgn(x_{j}-x_{k})\phi(k_{P_{j}}-k_{P_{k}})}\label{eq:wavefunction}
+\end{equation}
 
 \end_inset
 
@@ -738,6 +738,11 @@ Where the
  is even.
  This is easily checked by taking the natural logarithm on both sides of
  the Bethe equations.
+ From now on, we will use the (half-) integers 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+to label the eigenstates.
 \end_layout
 
 \begin_layout Standard
@@ -845,11 +850,108 @@ TODO:
 \end_layout
 
 \begin_layout Standard
-- Why cannot two I's be the same?
+- Why cannot two I's be the same? (physical interpretation?)
 \end_layout
 
 \begin_layout Standard
 - How can I see that the ground state has indeed the lowest energy?
+\end_layout
+
+\begin_layout Standard
+------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+Let's try to describe the ground state.
+ First, note that when two 
+\begin_inset Formula $I$
+\end_inset
+
+'s are the same, for example 
+\begin_inset Formula $I_{1}=I_{2}$
+\end_inset
+
+, then also 
+\begin_inset Formula $k_{1}=k_{2}$
+\end_inset
+
+.
+ This can be seen by subtracting the Bethe equations (
+\begin_inset Formula $\ref{eq:logform}$
+\end_inset
+
+) for 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+and 
+\begin_inset Formula $k_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(k_{1}-k_{2})L=2\pi(I_{1}-I_{2})-\sum_{l=1}^{N}\phi(k_{1}-k_{l})-\phi(k_{2}-k_{l})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Setting 
+\begin_inset Formula $k_{1}=k_{2}$
+\end_inset
+
+ satisfies the above equation, and since it can be proved (REF) that for
+ a given set of 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+, a unique set of 
+\begin_inset Formula $k_{j}$
+\end_inset
+
+ can be found that satisfies the Bethe equations, 
+\begin_inset Formula $k_{1}=k_{2}$
+\end_inset
+
+ does indeed hold.
+\end_layout
+
+\begin_layout Standard
+If any two of the momentum parameters 
+\begin_inset Formula $k_{j}$
+\end_inset
+
+ are the same, 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ is zero.
+ This can be seen from 
+\begin_inset Formula $\ref{eq:wavefunction}$
+\end_inset
+
+, which is asymmetric under the exchange of two momenta.
+ When two 
+\begin_inset Formula $k_{j}$
+\end_inset
+
+ are the same, exchanging them obviously does not change the wave function.
+ But since the asymmetry requires an extra minus sign, we have 
+\begin_inset Formula $\Psi=-\Psi$
+\end_inset
+
+, or 
+\begin_inset Formula $\Psi=0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
