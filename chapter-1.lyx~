@@ -63,8 +63,8 @@ customHeadersFooters
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman lmodern
-\font_sans lmss
+\font_roman newcent
+\font_sans helvet
 \font_typewriter lmtt
 \font_default_family default
 \use_non_tex_fonts false
@@ -630,6 +630,11 @@ TODO:
 \end_layout
 
 \begin_layout Standard
+--------------------------------------------------------------------------------
+-----------------------
+\end_layout
+
+\begin_layout Standard
 Our assumption for the wavefunction is 
 \end_layout
 
@@ -832,9 +837,9 @@ And we are left with:
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-P=\frac{2\pi}{L}\sum_{j=1}^{N}I_{j}
-\]
+\begin{equation}
+P=\frac{2\pi}{L}\sum_{j=1}^{N}I_{j}\label{eq:momentum}
+\end{equation}
 
 \end_inset
 
@@ -850,11 +855,15 @@ TODO:
 \end_layout
 
 \begin_layout Standard
-- Why cannot two I's be the same? (physical interpretation?)
+- Refer to notes by Fabio Franchini
 \end_layout
 
 \begin_layout Standard
-- How can I see that the ground state has indeed the lowest energy?
+- Refer to proof of uniqueness
+\end_layout
+
+\begin_layout Standard
+- No degeneracy means no level crossing because...?
 \end_layout
 
 \begin_layout Standard
@@ -907,8 +916,8 @@ Setting
 \begin_inset Formula $k_{1}=k_{2}$
 \end_inset
 
- satisfies the above equation, and since it can be proved that for a given
- set of 
+ satisfies the above equation, and since it can be proved (REF) that for
+ a given set of 
 \begin_inset Formula $I_{j}$
 \end_inset
 
@@ -949,6 +958,122 @@ If any two of the momentum parameters
 
 , or 
 \begin_inset Formula $\Psi=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Physically, this can be interpreted as follows: two particles with the same
+ momentum either never meet or, if they have the same position, always coincide,
+ contributing infinitely to the energy due to the 
+\begin_inset Formula $\delta$
+\end_inset
+
+-interaction.
+ This gives an non-physical state and has to be avoided.
+\end_layout
+
+\begin_layout Standard
+So this bosonic model has a fermionic character, in the sense that the momentum
+ quantum numbers that label the eigenstates have to be different to get
+ a non-zero wavefunction.
+\end_layout
+
+\begin_layout Standard
+The ground state is labeled by the following 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+I_{j}=-\frac{N+1}{2}+j\qquad j=1,2,\dots,N\label{eq:groundstate}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From 
+\begin_inset Formula $\ref{eq:momentum}$
+\end_inset
+
+ it can be easily checked that this state has zero momentum.
+ To see that this state has the lowest energy, we look first at the case
+ 
+\begin_inset Formula $c\rightarrow\infty$
+\end_inset
+
+.
+ Here, the Bethe equations 
+\begin_inset Formula $\ref{eq:logform}$
+\end_inset
+
+ reduce to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k_{j}L=2\pi I_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+because the scattering phase shifts are all zero.
+ The symmetric distribution of 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+ 
+\begin_inset Formula $\ref{eq:groundstate}$
+\end_inset
+
+ clearly gives the lowest possible energy.
+ If we now decrease the coupling constant 
+\begin_inset Formula $c$
+\end_inset
+
+, the 
+\begin_inset Formula $k_{j}$
+\end_inset
+
+ will change values, because the scattering phase shifts are no longer zero.
+ But since the 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+ are quantized they cannot change.
+ We have already seen that the ground state cannot be degenerate (because
+ for a set 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+, there is a unique solution for the 
+\begin_inset Formula $k_{j}$
+\end_inset
+
+), so there can't be a level crossing upon changing 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\ref{eq:groundstate}$
+\end_inset
+
+ labels the ground state for any 
+\begin_inset Formula $c$
 \end_inset
 
 .
