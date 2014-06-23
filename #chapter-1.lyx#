@@ -278,7 +278,7 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Description of the model and conventions
+Description of the Lieb-Liniger model
 \end_layout
 
 \begin_layout Standard
@@ -863,7 +863,7 @@ TODO:
 \end_layout
 
 \begin_layout Standard
-- No degeneracy means no le
+- No degeneracy means no level crossing because...?
 \end_layout
 
 \begin_layout Standard
@@ -1000,6 +1000,67 @@ I_{j}=-\frac{N+1}{2}+j\qquad j=1,2,\dots,N\label{eq:groundstate}
 \end_layout
 
 \begin_layout Standard
+See 
+\begin_inset Formula $\ref{fig:groundstate}$
+\end_inset
+
+ for a visual representation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename groundstate.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+A visual representation of the ground state for 
+\begin_inset Formula $N=5$
+\end_inset
+
+.
+ The dashed line denotes zero, a black dot represents a (half) integer 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+ that label this state are -2, -1, 0, 1, 2.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:groundstate"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 From 
 \begin_inset Formula $\ref{eq:momentum}$
 \end_inset
@@ -1068,7 +1129,312 @@ because the scattering phase shifts are all zero.
 \end_inset
 
 .
+ Hence, 
+\begin_inset Formula $\ref{eq:groundstate}$
+\end_inset
+
+ labels the ground state for any 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Excitations of the ground state
+\end_layout
+
+\begin_layout Standard
+We can identify two fundamental excitations of the ground state: adding
+ a particle with momentum 
+\begin_inset Formula $k_{p}$
+\end_inset
+
+ (
+\series bold
+Type I
+\series default
+) and creating a hole (removing a particle) with momentum 
+\begin_inset Formula $k_{h}$
+\end_inset
+
+ (
+\series bold
+Type II
+\series default
+).
+\end_layout
+
+\begin_layout Subsubsection*
+Type I excitations
+\end_layout
+
+\begin_layout Standard
+Let's check what happens when we add a particle with a certain momentum
  
+\begin_inset Formula $k_{p}>0$
+\end_inset
+
+ to the ground state for 
+\begin_inset Formula $N=5$
+\end_inset
+
+.
+ We start with the following quantum numbers:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{I_{j}\}=\{-2,-1,0,1,2\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we add a particle, increasing the number of particles from 
+\begin_inset Formula $N$
+\end_inset
+
+ to 
+\begin_inset Formula $N+1$
+\end_inset
+
+.
+ It is important to realize that this excitation changes the quantum numbers
+ 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+ from integers to half integers or the other way around.
+ The new state has quantum numbers
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{I_{j}\}=\{-\frac{5}{2},-\frac{3}{2},-\frac{1}{2},\frac{1}{2},\frac{3}{2},\frac{5}{2}+m\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $m>0$
+\end_inset
+
+ and integer.
+ This new state is created by taking the ground state of 6 particles and
+ increasing by m the momentum of the highest particle.
+ We could also have created the state 
+\begin_inset Formula $\{-\frac{5}{2}-m,-\frac{3}{2},-\frac{1}{2},\frac{1}{2},\frac{3}{2},\frac{5}{2}\}$
+\end_inset
+
+ by adding a particle with negative momentum.
+ In general, for positive momentum, we go from 
+\begin_inset Formula $\ref{eq:groundstate}$
+\end_inset
+
+, the ground state, to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{I_{j}\}=\{-\frac{N}{2},-\frac{N}{2}+1,\dots,\frac{N}{2}+m\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename typeI_excitation.jpg
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Visual representation of a type I excitation of a ground state for 
+\begin_inset Formula $N=5$
+\end_inset
+
+, 
+\begin_inset Formula $m=1$
+\end_inset
+
+.
+ The bottom row represents the ground state and the top row, which has 6
+ particles, represents the excited state.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The momentum of the newly created state is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P=\frac{2\pi}{L}m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+whereas the ground state had 
+\begin_inset Formula $P=0$
+\end_inset
+
+.
+ This momentum change 
+\begin_inset Formula $\frac{2\pi}{L}m$
+\end_inset
+
+ is different from 
+\begin_inset Formula $k_{p}$
+\end_inset
+
+, because by adding one particle with momentum 
+\begin_inset Formula $k_{p}$
+\end_inset
+
+, we changed the momentum of all the particles.
+ The momentum 
+\begin_inset Formula $k_{p}$
+\end_inset
+
+ is called the bare momentum, and 
+\begin_inset Formula $P$
+\end_inset
+
+ the observed momentum.
+\end_layout
+
+\begin_layout Subsubsection*
+Type II excitations
+\end_layout
+
+\begin_layout Standard
+In a type II excitation, we remove a particle with momentum 
+\begin_inset Formula $k_{h}$
+\end_inset
+
+, creating a hole.
+ The number of particles decreases from 
+\begin_inset Formula $N$
+\end_inset
+
+ to 
+\begin_inset Formula $N-1$
+\end_inset
+
+.
+ For a hole with positive momentum, we would go from the ground state, 
+\begin_inset Formula $\ref{eq:groundstate}$
+\end_inset
+
+, to the following state: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{I_{j}\}=\{-\frac{N}{2}+1,-\frac{N}{2}+2,\dots,\frac{N}{2}-m-1,\frac{N}{2}-m+1,\dots,\frac{N}{2}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Again, we go from integers to half-integers or vice versa.
+ The new state can be viewed as the ground state for 
+\begin_inset Formula $N-1$
+\end_inset
+
+ particles, but with one momentum 
+\begin_inset Formula $k_{h}$
+\end_inset
+
+ absent, and an extra momentum one level above the highest momentum of the
+ ground state.
+ For our 
+\begin_inset Formula $N=5$
+\end_inset
+
+ example, we would go from the ground state
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{I_{j}\}=\{-2,-1,0,1,2\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+to, for example, the excited state
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{I_{j}\}=\{-\frac{3}{2},-\frac{1}{2},\frac{3}{2},\frac{5}{2}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, 
+\begin_inset Formula $m=2$
+\end_inset
+
+, since we miss the 
+\begin_inset Formula $I=\frac{1}{2}$
+\end_inset
+
+ quantum number.
 \end_layout
 
 \begin_layout Standard
