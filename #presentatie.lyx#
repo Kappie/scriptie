@@ -50,8 +50,8 @@
 \end_index
 \secnumdepth 2
 \tocdepth 2
-\paragraph_separation skip
-\defskip bigskip
+\paragraph_separation indent
+\paragraph_indentation default
 \quotes_language english
 \papercolumns 1
 \papersides 1
@@ -71,7 +71,7 @@
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 This file is a solution template for:
@@ -325,7 +325,7 @@ LatexCommand tableofcontents
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Structuring a talk is a difficult task and the following structure may not
@@ -394,7 +394,17 @@ Basic Problem
 Motivations
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->
+\end_layout
+
+\end_inset
+
 
 \series bold
 J.
@@ -404,84 +414,30 @@ J.
  arXiv:1401.4262 [cond-mat.quant-gas]
 \end_layout
 
-\begin_layout Pause
-
-\end_layout
-
-\begin_layout Standard
-"
-\series medium
-Japanese
-\series default
- guys" demonstrate dynamics of a quasi-particle state in 1D Bose gas
-\end_layout
-
-\begin_layout BeginFrame
-Decay of quasi-particle
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
+\begin_layout Itemize
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename density_profile_japanese.png
-	scale 26
 
-\end_inset
-
-
+<2->
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout BeginFrame
-Aim
+"Japanese guys" demonstrate dynamics of a quasi-particle state in 1D Bose
+ gas
 \end_layout
 
 \begin_layout Standard
-Take a closer look at decay.
- Can we find an expression for it?
+
 \end_layout
 
 \begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Subsection
-The Lieb-Liniger model
-\end_layout
-
-\begin_layout BeginFrame
-The Lieb-Liniger model
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $N$
-\end_inset
-
- bosons on a ring with contact interaction (a delta peak.)
-\end_layout
-
-\begin_layout Pause
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align center
+\begin_layout Itemize
 \begin_inset ERT
 status open
 
@@ -510,7 +466,7 @@ draw (2,2) ellipse (4cm and 1cm);
 
 	
 \backslash
-draw[myblue, line width=7pt, line cap=round, dash pattern=on 0pt off 7
+draw[myblue, line width=5pt, line cap=round, dash pattern=on 0pt off 5
 \backslash
 pgflinewidth] (2,2) ellipse (4cm and 1cm);
 \end_layout
@@ -527,206 +483,205 @@ end{tikzpicture}
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
+\begin_deeper
 \begin_layout Pause
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula 
-\[
-H=-\sum_{i=1}^{N}\frac{\partial^{2}}{\partial x_{i}^{2}}+2c\sum_{i<j}\delta(x_{i}-x_{j})
-\]
+\end_deeper
+\begin_layout Itemize
+Use very short sentences or short phrases.
+\end_layout
 
-\end_inset
+\begin_deeper
+\begin_layout Pause
 
+\end_layout
 
+\end_deeper
+\begin_layout Itemize
+These overlays are created using the Pause style.
 \end_layout
 
 \begin_layout BeginFrame
-Bethe Ansatz
+Make Titles Informative.
+ 
 \end_layout
 
-\begin_layout Standard
-Solvable through Bethe Ansatz: assume product of plane waves.
+\begin_layout Itemize
+<1->You can also use overlay specifications to create overlays.
 \end_layout
 
-\begin_layout Pause
-
-\end_layout
-
-\begin_layout Standard
-Leads to Bethe equations for bosons' pseudo-momenta:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-k_{j}L=2\pi I_{j}-2\sum_{l=1}^{N}\arctan(\frac{k_{j}-k_{l}}{c})\qquad j=1,\dots,N
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Pause
-
-\end_layout
-
-\begin_layout Standard
-We label eigenstates by integers 
-\begin_inset Formula $I_{j}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout BeginFrame
-Ground State
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\noindent
-\align center
+\begin_layout Itemize
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-begin{tikzpicture}
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-draw[dashed] (0,-0.5) -- (0,0.5);
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-foreach 
-\backslash
-x in {-2,...,2} {
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-filldraw (
-\backslash
-x,0) circle (0.1cm);
-\end_layout
-
-\begin_layout Plain Layout
-
-	}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{tikzpicture}
+<3->
 \end_layout
 
 \end_inset
 
+This allows you to present things in any order.
+\end_layout
 
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Pause
-
-\end_layout
-
-\begin_layout Standard
-Ground state for 
-\begin_inset Formula $N=5$
-\end_inset
-
- labeled by:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\{I_{j}\}=\{-2,-1,0,1,2\}
-\]
-
-\end_inset
-
-
+This is shown second.
 \end_layout
 
 \begin_layout BeginFrame
-Momentum
+Make Titles Informative.
 \end_layout
 
-\begin_layout Standard
-Momentum given by:
+\begin_layout Block
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+<1->
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula 
-\[
-P=\frac{2\pi}{L}\sum_{j=1}^{N}I_{j}
-\]
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Pause
+\begin_deeper
+\begin_layout Itemize
+Untitled block.
+\end_layout
+
+\begin_layout Itemize
+Shown on all slides.
+\end_layout
+
+\end_deeper
+\begin_layout ExampleBlock
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some Example Block Title
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
-\begin_layout Standard
-Groundstate: 
-\begin_inset Formula $I_{j}$
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $e^{i\pi}=-1$
 \end_inset
 
-'s sum to zero:
+.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula 
-\[
-P=0
-\]
+\begin_layout Itemize
+\begin_inset Formula $e^{i\pi/2}=i$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+The Lieb-Liniger model
+\end_layout
+
+\begin_layout BeginFrame
+Make Titles Informative.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->
+\end_layout
 
 \end_inset
 
+On first slide.
+ 
+\end_layout
 
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+On second slide.
 \end_layout
 
 \begin_layout Subsection
@@ -734,149 +689,7 @@ Excitations of the ground state
 \end_layout
 
 \begin_layout BeginFrame
-Excitations of the ground state
-\end_layout
-
-\begin_layout Standard
-One-hole excitations: create a hole somewhere.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{tikzpicture}
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-draw[dashed] (0,-0.5) -- (0,0.5);
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-foreach 
-\backslash
-x in {-2,...,1} {
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-filldraw (
-\backslash
-x,0) circle (0.1cm);
-\end_layout
-
-\begin_layout Plain Layout
-
-	}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-draw (2,0) circle (0.1cm);
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-filldraw (3,0) circle (0.1cm);
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{tikzpicture}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Pause
-
-\end_layout
-
-\begin_layout Standard
-Labeled by:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\{I_{j}\}=\{-2,-1,0,1,3\}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Pause
-
-\end_layout
-
-\begin_layout Standard
-For hole position 
-\begin_inset Formula $m$
-\end_inset
-
- (here 
-\begin_inset Formula $m=1$
-\end_inset
-
-):
-\end_layout
-
-\begin_layout Quotation
-
-\family typewriter
-\begin_inset Formula 
-\[
-P=\frac{2\pi}{L}m
-\]
-
-\end_inset
-
-
+BlaBla
 \end_layout
 
 \begin_layout Subsection
@@ -884,30 +697,7 @@ Quasi-particle state
 \end_layout
 
 \begin_layout BeginFrame
-Quasi-particle state
-\end_layout
-
-\begin_layout Standard
-Sum all one-hole excitations (
-\series bold
-momentum eigenstates
-\series default
-) to get a state that is localized in 
-\series bold
-position
-\series default
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-|\Psi\rangle=\frac{1}{\sqrt{N}}\sum_{p=-N}^{N}e^{-2\pi ipq/N}|P\rangle
-\]
-
-\end_inset
-
-
+Blaz
 \end_layout
 
 \begin_layout Section

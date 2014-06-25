@@ -298,7 +298,7 @@ H=-\sum_{i=1}^{N}\frac{\partial^{2}}{\partial x_{i}^{2}}+2c\sum_{i<j}\delta(x_{i
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section
 The two particle case
 \end_layout
 
@@ -612,7 +612,7 @@ In this case:
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section
 Solution for general N
 \end_layout
 
@@ -846,7 +846,7 @@ P=\frac{2\pi}{L}\sum_{j=1}^{N}I_{j}\label{eq:momentum}
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section
 The ground state
 \end_layout
 
@@ -1140,7 +1140,7 @@ because the scattering phase shifts are all zero.
 .
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section
 Excitations of the ground state
 \end_layout
 

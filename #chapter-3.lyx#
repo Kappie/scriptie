@@ -278,43 +278,27 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Density profile of a quasiparticle state
+Derivation of the decay behaviour of the quasi-particle
 \end_layout
 
 \begin_layout Standard
-In this chapter we'll define a quasiparticle state, or a density notch state.
- This is a state that is localized in position space: it has a sharp notch
- in the density.
- To build such a state from momentum eigenstates, we have to sum over all
- of them.
- Let 
-\begin_inset Formula $|P\rangle$
+In this chapter I will use a stationary phase approximation to show that
+ the notch depth decays as 
+\begin_inset Formula $\frac{1}{t}$
 \end_inset
 
- be the type II excitation with total (dressed) momentum 
-\begin_inset Formula $\frac{2\pi p}{L}$
+ for large 
+\begin_inset Formula $t$
 \end_inset
 
-, as in 
-\begin_inset Formula $\ref{eq:dressed_momentum}$
-\end_inset
-
-.
- The density notch state 
-\begin_inset Formula $|X\rangle$
-\end_inset
-
- for 
-\begin_inset Formula $N$
-\end_inset
-
- particles is then defined as:
+, as the simulation shows.
+ We start with:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-|X\rangle=\frac{1}{\sqrt{N}}\sum_{p=-N}^{N}e^{-2\pi ipq/N}|P\rangle
+\int_{\mathbb{R}}dpA_{p}e^{iE_{p}t}
 \]
 
 \end_inset
@@ -323,122 +307,37 @@ In this chapter we'll define a quasiparticle state, or a density notch state.
 \end_layout
 
 \begin_layout Standard
-To see why summing over momentum eigenstates gives a state that is localized
- in position, consider the expansion of a general state 
-\begin_inset Formula $|\Psi\rangle$
-\end_inset
-
- in eigenstates of the position operator:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-|\psi\rangle=\int dx|x\rangle\langle x|\psi\rangle\label{eq:position_basis}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Here, 
-\begin_inset Formula $\langle x|\psi\rangle$
-\end_inset
-
- is the probability amplitude for the state 
-\begin_inset Formula $|\psi\rangle$
+This is an oscillatory integral with phase term 
+\begin_inset Formula $\phi=E_{p}t$
 \end_inset
 
 .
- This means 
-\begin_inset Formula $|\langle x|\psi\rangle|^{2}$
-\end_inset
-
- is the probability to get a value between 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $x+dx$
-\end_inset
-
- when the position is measured.
- 
-\begin_inset Formula $\langle x|\psi\rangle$
-\end_inset
-
- is usually denoted by 
-\begin_inset Formula $\psi(x)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Now, consider a momentum eigenstate
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\hat{p}|p\rangle=p|p\rangle
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Here, 
+ The values of 
 \begin_inset Formula $p$
 \end_inset
 
- is the eigenvalue of the operator 
-\begin_inset Formula $\hat{p}$
+ for which 
+\begin_inset Formula $\phi$
 \end_inset
 
-.
- The representation of this state in terms of position eigenstates,
-\begin_inset Formula $\langle x|p\rangle,$
+ varies rapidly do not contribute to the integral.
+ We focus on the values of 
+\begin_inset Formula $p$
 \end_inset
 
- satisfies the following relation:
+ for which the phase term is stationary, that is 
+\begin_inset Formula $\frac{d\phi}{dp}=0$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\hat{p}\langle x|p\rangle=-i\frac{\partial}{\partial x}=p\langle x|p\rangle
+\frac{d\phi}{dp}=\frac{dE_{p}}{dp}t=0
 \]
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Evidently, 
-\begin_inset Formula $\langle x|p\rangle$
-\end_inset
-
- is of the form 
-\begin_inset Formula $C(p)e^{ipx}$
-\end_inset
-
-.
- Now, to write a general state 
-\begin_inset Formula $|\Psi\rangle$
-\end_inset
-
- in the momentum basis, take the inner product with 
-\begin_inset Formula $\langle p|$
-\end_inset
-
- on both sides of 
-\begin_inset Formula $\ref{}$
 \end_inset
 
 

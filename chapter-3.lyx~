@@ -282,6 +282,179 @@ Derivation of the decay behaviour of the quasi-particle
 \end_layout
 
 \begin_layout Standard
+In this chapter I will use a stationary phase approximation to show that
+ the notch depth decays as 
+\begin_inset Formula $\frac{1}{t}$
+\end_inset
+
+ for large 
+\begin_inset Formula $t$
+\end_inset
+
+, as the simulation shows.
+ We start with:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{\mathbb{R}}dpA_{p}e^{iE(p)t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is an oscillatory integral with phase term 
+\begin_inset Formula $\phi=E(p)t$
+\end_inset
+
+.
+ We take 
+\begin_inset Formula $A_{p}$
+\end_inset
+
+ to be constant.
+ The values of 
+\begin_inset Formula $p$
+\end_inset
+
+ for which 
+\begin_inset Formula $\phi$
+\end_inset
+
+ varies rapidly do not contribute to the integral.
+ We focus on the values of 
+\begin_inset Formula $p$
+\end_inset
+
+ for which the phase term is stationary, that is 
+\begin_inset Formula $\frac{d\phi}{dp}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\phi}{dp}=\frac{dE(p)}{dp}t=0\implies\frac{dE(p)}{dp}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We call the 
+\begin_inset Formula $p$
+\end_inset
+
+ that satisfy this equation 
+\begin_inset Formula $p_{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{R}$
+\end_inset
+
+, since it turns out there are two such 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Continue for 
+\begin_inset Formula $p_{L}=p$
+\end_inset
+
+, argument for 
+\begin_inset Formula $p_{R}$
+\end_inset
+
+ analogous.
+ Now expand 
+\begin_inset Formula $\phi$
+\end_inset
+
+ about 
+\begin_inset Formula $p=p_{L}$
+\end_inset
+
+ to second order:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi\approx E(p_{L})t+\frac{1}{2}\frac{d^{2}E}{dp^{2}}(p_{L})t(p_{L}-p)^{2}\equiv E(p_{L})t+\frac{1}{2}\alpha t(p_{L}-p)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We now have the integral:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{\mathbb{R}}dpA_{p}e^{it[E(p_{L})+\frac{1}{2}\alpha(p-p_{L})^{2}]}=\#\int_{\mathbb{R}}dpe^{\frac{it\alpha}{2}p{}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can still integrate over the whole real line for large 
+\begin_inset Formula $t$
+\end_inset
+
+, since then even a small difference 
+\begin_inset Formula $(p-p_{L})$
+\end_inset
+
+ leads to rapid oscillations of the integrand.
+ 
+\begin_inset Formula $\#$
+\end_inset
+
+ denotes different real numbers that are not important in our reasoning.
+ In the second step, we shifted the integral from 
+\begin_inset Formula $p-p_{L}$
+\end_inset
+
+ to 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Now a rescaling 
+\begin_inset Formula $\bar{p}=p\sqrt{\alpha t}$
+\end_inset
+
+ yields:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\#}{\sqrt{t}}\int_{\mathbb{R}}d\bar{p}e^{\frac{i}{2}\bar{p}^{2}}=\frac{\#}{\sqrt{t}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Branch NoChildDocument
 status collapsed
 
