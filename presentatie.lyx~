@@ -7,6 +7,7 @@
 \usepackage{tikz} 
 \usepackage{pgfplots}
 \usepackage{beamerthemebeamer}
+\usepackage{movie15}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
@@ -902,12 +903,313 @@ position
 \begin_layout Standard
 \begin_inset Formula 
 \[
-|\Psi\rangle=\frac{1}{\sqrt{N}}\sum_{p=-N}^{N}e^{-2\pi ipq/N}|P\rangle
+|\Psi\rangle=\frac{1}{\sqrt{N}}\sum_{m=-N}^{N}|P\rangle
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|P\rangle$
+\end_inset
+
+ represents the one-hole excitation with momentum 
+\begin_inset Formula $\frac{2\pi}{L}m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-2,0) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-1,0) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-0,0) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw (1,0) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-2,-1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-1,-1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw (0,-1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (1,-1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-2,-2) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw (-1,-2) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (0,-2) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (1,-2) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-1,-3) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (0,-3) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (1,-3) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-1,-4) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (0,-4) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw (1,-4) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (2,-4) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-1,-5) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw (0,-5) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (1,-5) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (2,-5) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw (-1,-6) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (0,-6) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (1,-6) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (2,-6) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[dashed] (0,-3.5) -- (0,-2.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+All one-hole excitations for 
+\begin_inset Formula $N=3$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -919,25 +1221,54 @@ Density profile: collapse of quasi-particle
 \end_layout
 
 \begin_layout BeginFrame
-Make Titles Informative.
- 
+Density Profile
 \end_layout
 
-\begin_layout Theorem
-On first slide.
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Pause
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includemovie{1cm}{1cm}{density_typeII_symmetric_c1N100_animation_t_0-3.gif}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
-\begin_layout Corollary
-On second slide.
+\end_inset
+
+
 \end_layout
 
 \begin_layout BeginFrame
-Make Titles Informative.
- 
+Notch depth
+\end_layout
+
+\begin_layout Standard
+BlaBla plaatje
+\end_layout
+
+\begin_layout BeginFrame
+Fit for 
+\begin_inset Formula $t>bla$
+\end_inset
+
+
 \end_layout
 
 \begin_layout ColumnsTopAligned
