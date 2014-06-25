@@ -323,51 +323,6 @@ In this chapter we'll define a quasiparticle state, or a density notch state.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename density_notch_state.jpg
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Visual representation of the density notch state for 
-\begin_inset Formula $N=3$
-\end_inset
-
- particles.
- The state 
-\begin_inset Formula $|0\rangle$
-\end_inset
-
- with zero momentum is the ground state, drawn on row 4.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 To see why summing over momentum eigenstates gives a state that is localized
  in position, consider the expansion of a general state 
 \begin_inset Formula $|\Psi\rangle$
@@ -379,7 +334,7 @@ To see why summing over momentum eigenstates gives a state that is localized
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-|\psi\rangle=\int_{-\infty}^{\infty}dx|x\rangle\langle x|\psi\rangle\label{eq:position_basis}
+|\psi\rangle=\int dx|x\rangle\langle x|\psi\rangle\label{eq:position_basis}
 \end{equation}
 
 \end_inset
@@ -475,7 +430,7 @@ Evidently,
 
 .
  Now, to write a general state 
-\begin_inset Formula $|\psi\rangle$
+\begin_inset Formula $|\Psi\rangle$
 \end_inset
 
  in the momentum basis, take the inner product with 
@@ -483,55 +438,10 @@ Evidently,
 \end_inset
 
  on both sides of 
-\begin_inset Formula $\ref{eq:position_basis}$
-\end_inset
-
-.
- 
-\begin_inset Formula $\langle p|x\rangle$
-\end_inset
-
-, being the conjugate of 
-\begin_inset Formula $\langle x|p\rangle$
-\end_inset
-
-, can be subsituted by 
-\begin_inset Formula $C(p)e^{-ipx}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\langle p|\psi\rangle=\int_{-\infty}^{\infty}dx\langle p|x\rangle\langle x|\psi\rangle=\int_{-\infty}^{\infty}dxC(p)e^{-ipx}\psi(x)
-\]
-
+\begin_inset Formula $\ref{}$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-This is a fourier transform! To go from momentum space to position space,
- like in our case, we can do
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\langle x|\psi\rangle=\int_{-\infty}^{\infty}dpC(x)e^{ipx}\phi(p)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Since in our case, we sum over a finite amount of momentum states, we only
- obtain an approximate localized position state.
 \end_layout
 
 \begin_layout Standard
