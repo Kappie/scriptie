@@ -920,7 +920,7 @@ position
 \end_inset
 
  represents the one-hole excitation with momentum 
-\begin_inset Formula $\frac{2\pi}{L}m$
+\begin_inset Formula $P=\frac{2\pi}{L}m$
 \end_inset
 
 .
@@ -1256,73 +1256,243 @@ includemovie{1cm}{1cm}{density_typeII_symmetric_c1N100_animation_t_0-3.gif}
 \end_layout
 
 \begin_layout BeginFrame
+Notch Up Close
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includemovie{1cm}{1cm}{density_typeII_symmetric_c1N100x50-55_animation_t0-10.gif}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
 Notch depth
 \end_layout
 
 \begin_layout Standard
-BlaBla plaatje
+TODO:
 \end_layout
 
-\begin_layout BeginFrame
-Fit for 
-\begin_inset Formula $t>bla$
-\end_inset
-
-
+\begin_layout Itemize
+betere gif (0 < t < 10)
 \end_layout
 
-\begin_layout ColumnsTopAligned
-
+\begin_layout Itemize
+sowieso mooiere plaatjes met gnuplot
 \end_layout
 
-\begin_deeper
-\begin_layout Column
-5cm
+\begin_layout Itemize
+plaatje fit
 \end_layout
 
-\begin_layout Theorem
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<1->
+\begin_layout Itemize
+afleiding stationary phase approx
 \end_layout
 
-\end_inset
-
-In left column.
-\end_layout
-
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Corollary
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-In right column.
-\begin_inset Newline newline
-\end_inset
-
-New line
-\end_layout
-
-\end_deeper
 \begin_layout Subsection
 \begin_inset Formula $t^{-1}$
 \end_inset
 
  decay behaviour and lifetime parameter 
 \begin_inset Formula $\tau$
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Decay Behaviour 
+\begin_inset Formula $c=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename notch_depth_c1N100t0-10WhiteStyle.pdf
+	scale 57
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Decay Behaviour 
+\begin_inset Formula $c=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename notch_depth_c2N100t0-10WhiteStyle.pdf
+	scale 57
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Decay Behaviour 
+\begin_inset Formula $c=4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename notch_depth_c4N100t0-10WhiteStyle.pdf
+	scale 57
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Decay Behaviour 
+\begin_inset Formula $c=8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename notch_depth_c8N100t0-10WhiteStyle.pdf
+	scale 57
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Fit 
+\begin_inset Formula $\frac{A}{t+B}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For large t (for which notch depth is smaller than 
+\begin_inset Formula $\frac{1}{e}$
+\end_inset
+
+ of initial depth)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename notch_depth_fit_c1N100tbigWhiteStyle.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
@@ -1366,49 +1536,6 @@ third message
 , but not more than that.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-An outlook is always optional.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-vskip0pt plus.5fill
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Outlook
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-What we have not done yet.
-\end_layout
-
-\begin_layout Itemize
-Even more stuff.
-\end_layout
-
-\end_deeper
 \begin_layout EndFrame
 
 \end_layout

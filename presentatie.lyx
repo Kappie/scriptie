@@ -920,7 +920,7 @@ position
 \end_inset
 
  represents the one-hole excitation with momentum 
-\begin_inset Formula $\frac{2\pi}{L}m$
+\begin_inset Formula $P=\frac{2\pi}{L}m$
 \end_inset
 
 .
@@ -1256,6 +1256,45 @@ includemovie{1cm}{1cm}{density_typeII_symmetric_c1N100_animation_t_0-3.gif}
 \end_layout
 
 \begin_layout BeginFrame
+Notch Up Close
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includemovie{1cm}{1cm}{density_typeII_symmetric_c1N100x50-55_animation_t0-10.gif}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
 Notch depth
 \end_layout
 
@@ -1272,11 +1311,11 @@ sowieso mooiere plaatjes met gnuplot
 \end_layout
 
 \begin_layout Itemize
-plaatje fit
+Plaatje notch depth
 \end_layout
 
 \begin_layout Itemize
-afleiding stationary phase approx
+afleiding stationary phase approx?
 \end_layout
 
 \begin_layout Subsection
@@ -1291,230 +1330,203 @@ afleiding stationary phase approx
 \end_layout
 
 \begin_layout BeginFrame
+Decay Behaviour 
+\begin_inset Formula $c=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename notch_depth_c1N100t0-10WhiteStyle.pdf
+	scale 57
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Decay Behaviour 
+\begin_inset Formula $c=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename notch_depth_c2N100t0-10WhiteStyle.pdf
+	scale 57
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Decay Behaviour 
+\begin_inset Formula $c=4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename notch_depth_c4N100t0-10WhiteStyle.pdf
+	scale 57
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Decay Behaviour 
+\begin_inset Formula $c=8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename notch_depth_c8N100t0-10WhiteStyle.pdf
+	scale 57
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Fit 
 \begin_inset Formula $t^{-1}$
 \end_inset
 
- decay behaviour
+ model
 \end_layout
 
 \begin_layout Standard
-Blaz
-\end_layout
-
-\begin_layout Section*
-Summary
-\end_layout
-
-\begin_layout BeginFrame
-Summary
-\end_layout
-
-\begin_layout Itemize
-The
-\color none
- 
-\color red
-first main message
-\color none
- of your talk in one or two lines.
-\end_layout
-
-\begin_layout Itemize
-The
-\color none
- 
-\color red
-second main message
-\color none
- of your talk in one or two lines.
-\end_layout
-
-\begin_layout Itemize
-Perhaps a
-\color none
- 
-\color red
-third message
-\color none
-, but not more than that.
-\end_layout
-
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout Section*
-\start_of_appendix
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-All of the following is optional and typically not needed.
-\end_layout
+\begin_inset Formula 
+\[
+\frac{A}{t+B}
+\]
 
 \end_inset
 
-Appendix
-\end_layout
 
-\begin_layout Subsection*
-For Further Reading
-\end_layout
-
-\begin_layout BeginFrame
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-[allowframebreaks]
-\end_layout
-
-\end_inset
-
-For Further Reading
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-beamertemplatebookbibitems
-\end_layout
-
+Find values for 
+\begin_inset Formula $A$
 \end_inset
 
+ and 
+\begin_inset Formula $B$
+\end_inset
 
-\begin_inset Note Note
+.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+For large t (for which notch depth is smaller than 
+\begin_inset Formula $\frac{1}{e}$
+\end_inset
+
+ of initial depth.)
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-Start with overview books.
+
 \end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename notch_depth_fit_c1N100tbigWhiteStyle.pdf
+	scale 50
 
 \end_inset
 
 
 \end_layout
-
-\begin_layout Bibliography
-\labelwidthstring References
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Author1990"
-
-\end_inset
-
-A.
- Author.
- 
-\begin_inset ERT
-status collapsed
 
 \begin_layout Plain Layout
 
-
-\backslash
-newblock
 \end_layout
 
 \end_inset
 
 
-\emph on
-Handbook of Everything
-\emph default
-.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- Some Press, 1990.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-beamertemplatearticlebibitems
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Followed by interesting articles.
- Keep the list short.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring References
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Someone2002"
-
-\end_inset
-
-S.
- Someone.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- On this and that
-\emph on
-.
-
-\emph default
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
-
-\emph on
-Journal on This and That
-\emph default
-.
- 2(1):50--100, 2000.
 \end_layout
 
 \begin_layout EndFrame
