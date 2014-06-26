@@ -124,7 +124,8 @@ In principle, this file can be redistributed and/or modified under the terms
 \end_layout
 
 \begin_layout Title
-Dynamics of quasi-particle states in a finite one-dimensional Bose gas
+Dynamics of quasi-particle states in a finite one-dimensional repulsive
+ Bose gas
 \begin_inset Argument
 status open
 
@@ -178,7 +179,7 @@ status open
 
 %
 \backslash
-pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+pgfdeclareimage[height=0.5cm]{institution-logo}{Natuurwetenschappen}
 \end_layout
 
 \begin_layout Plain Layout
@@ -403,18 +404,6 @@ J.
  Kaminishi, and T.
  Deguchi, Exact quantum dynamics of yrast states in the finite 1D Bose gas,
  arXiv:1401.4262 [cond-mat.quant-gas]
-\end_layout
-
-\begin_layout Pause
-
-\end_layout
-
-\begin_layout Standard
-"
-\series medium
-Japanese
-\series default
- guys" demonstrate dynamics of a quasi-particle state in 1D Bose gas
 \end_layout
 
 \begin_layout BeginFrame
@@ -1221,6 +1210,21 @@ Density profile: collapse of quasi-particle
 \end_layout
 
 \begin_layout BeginFrame
+Expectation value of particle density operator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\langle\Psi|\rho(x)|\Psi\rangle=\sum_{m,m'=-N}^{N}e^{i(P-P')x-i(E_{m}-E_{m'})t}\langle P|\rho(0)|P'\rangle
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
 Density Profile
 \end_layout
 
@@ -1311,11 +1315,15 @@ sowieso mooiere plaatjes met gnuplot
 \end_layout
 
 \begin_layout Itemize
-plaatje fit
+Plaatje notch depth
 \end_layout
 
 \begin_layout Itemize
-afleiding stationary phase approx
+afleiding stationary phase approx?
+\end_layout
+
+\begin_layout Itemize
+expectation value density operator erin
 \end_layout
 
 \begin_layout Subsection
@@ -1455,9 +1463,36 @@ status open
 
 \begin_layout BeginFrame
 Fit 
-\begin_inset Formula $\frac{A}{t+B}$
+\begin_inset Formula $t^{-1}$
 \end_inset
 
+ model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{A}{t+B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Find values for 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Pause
 
 \end_layout
 
@@ -1466,7 +1501,11 @@ For large t (for which notch depth is smaller than
 \begin_inset Formula $\frac{1}{e}$
 \end_inset
 
- of initial depth)
+ of initial depth.)
+\end_layout
+
+\begin_layout BeginFrame
+
 \end_layout
 
 \begin_layout Standard
@@ -1496,222 +1535,6 @@ status open
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section*
-Summary
-\end_layout
-
-\begin_layout BeginFrame
-Summary
-\end_layout
-
-\begin_layout Itemize
-The
-\color none
- 
-\color red
-first main message
-\color none
- of your talk in one or two lines.
-\end_layout
-
-\begin_layout Itemize
-The
-\color none
- 
-\color red
-second main message
-\color none
- of your talk in one or two lines.
-\end_layout
-
-\begin_layout Itemize
-Perhaps a
-\color none
- 
-\color red
-third message
-\color none
-, but not more than that.
-\end_layout
-
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout Section*
-\start_of_appendix
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-All of the following is optional and typically not needed.
-\end_layout
-
-\end_inset
-
-Appendix
-\end_layout
-
-\begin_layout Subsection*
-For Further Reading
-\end_layout
-
-\begin_layout BeginFrame
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-[allowframebreaks]
-\end_layout
-
-\end_inset
-
-For Further Reading
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-beamertemplatebookbibitems
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Start with overview books.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring References
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Author1990"
-
-\end_inset
-
-A.
- Author.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
-
-\emph on
-Handbook of Everything
-\emph default
-.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- Some Press, 1990.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-beamertemplatearticlebibitems
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Followed by interesting articles.
- Keep the list short.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring References
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Someone2002"
-
-\end_inset
-
-S.
- Someone.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- On this and that
-\emph on
-.
-
-\emph default
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
-
-\emph on
-Journal on This and That
-\emph default
-.
- 2(1):50--100, 2000.
 \end_layout
 
 \begin_layout EndFrame

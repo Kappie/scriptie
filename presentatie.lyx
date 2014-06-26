@@ -124,7 +124,8 @@ In principle, this file can be redistributed and/or modified under the terms
 \end_layout
 
 \begin_layout Title
-Dynamics of quasi-particle states in a finite one-dimensional Bose gas
+Dynamics of quasi-particle states in a finite one-dimensional repulsive
+ Bose gas
 \begin_inset Argument
 status open
 
@@ -178,7 +179,7 @@ status open
 
 %
 \backslash
-pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+pgfdeclareimage[height=0.5cm]{institution-logo}{Natuurwetenschappen}
 \end_layout
 
 \begin_layout Plain Layout
@@ -405,18 +406,6 @@ J.
  arXiv:1401.4262 [cond-mat.quant-gas]
 \end_layout
 
-\begin_layout Pause
-
-\end_layout
-
-\begin_layout Standard
-"
-\series medium
-Japanese
-\series default
- guys" demonstrate dynamics of a quasi-particle state in 1D Bose gas
-\end_layout
-
 \begin_layout BeginFrame
 Decay of quasi-particle
 \end_layout
@@ -554,6 +543,17 @@ Bethe Ansatz
 
 \begin_layout Standard
 Solvable through Bethe Ansatz: assume product of plane waves.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{ikx}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Pause
@@ -1221,6 +1221,21 @@ Density profile: collapse of quasi-particle
 \end_layout
 
 \begin_layout BeginFrame
+Expectation value of particle density operator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\langle\Psi|\rho(x)|\Psi\rangle=\sum_{m,m'=-N}^{N}e^{i(P-P')x-i(E_{m}-E_{m'})t}\langle P|\rho(0)|P'\rangle
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
 Density Profile
 \end_layout
 
@@ -1316,6 +1331,10 @@ Plaatje notch depth
 
 \begin_layout Itemize
 afleiding stationary phase approx?
+\end_layout
+
+\begin_layout Itemize
+expectation value density operator erin
 \end_layout
 
 \begin_layout Subsection
