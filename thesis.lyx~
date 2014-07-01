@@ -198,6 +198,10 @@ document
 Title of the thesis
 \end_layout
 
+\begin_layout Subtitle
+
+\end_layout
+
 \begin_layout Author
 Geert Kapteijns
 \end_layout
@@ -206,19 +210,24 @@ Geert Kapteijns
 Date (optional)
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
+\begin_layout Publishers
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100page%"
+special "none"
+height "1in"
+height_special "totalheight"
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Natuurwetenschappen.jpg
+	scale 50
 
 \end_inset
 
@@ -228,18 +237,29 @@ status open
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{
+\backslash
+baselineskip}
 \end_layout
 
-\begin_layout Publishers
-Faculty for leading edge science
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
-Institute for 
-\noun on
-Nobel
-\noun default
- price winning research
+Bla bla University Testburg
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset VSpace -3cm
 \end_inset
 

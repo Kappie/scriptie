@@ -279,8 +279,12 @@ thepage
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Density profile of a quasiparticle state
+\end_layout
+
+\begin_layout Section
+Definition
 \end_layout
 
 \begin_layout Standard
@@ -624,11 +628,11 @@ key "Japanese2"
 \end_inset
 
  in each term acts as a displacement operator.
- We will customarily set 
+ We will set 
 \begin_inset Formula $q=0$
 \end_inset
 
-, so the expression reduces to
+ from now on, so the expression reduces to
 \end_layout
 
 \begin_layout Standard
@@ -819,6 +823,95 @@ Summing with all coefficients equal to one gives a delta peak.
 
 Since in our case, we sum over a finite amount of momentum states, we only
  obtain an approximate localized position state.
+\end_layout
+
+\begin_layout Section
+Density profile
+\end_layout
+
+\begin_layout Standard
+The density operator is defined as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\rho}(x)=\frac{1}{L}\sum_{x_{j}}\delta(x-x_{j})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We evaluate its expectation value as function of time as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(x,t)=\langle\Psi|\hat{\rho}(x)|\Psi\rangle=\frac{1}{N}\sum_{p,p=-N}^{N}\langle P(t)|\hat{\rho}(x)|P'(t)\rangle
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now 
+\begin_inset Formula $|P(t)\rangle$
+\end_inset
+
+ can be written as 
+\begin_inset Formula $e^{-iE_{p}t}|P\rangle$
+\end_inset
+
+ and we apply the translation operator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{T}(a)=e^{-ia\hat{p}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+to shift the eigenstates 
+\begin_inset Formula $|P\rangle$
+\end_inset
+
+ to the origin by an amount 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ We obtain:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(x,t)=\frac{1}{N}\sum_{p,p=-N}^{N}\langle P|\hat{\rho}(0)|P'\rangle e^{i(P-P')x-i(E_{p}-E_{p'})t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The form factors 
+\begin_inset Formula $\langle P|\hat{\rho}(0)|P\rangle$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
