@@ -51,6 +51,8 @@
 
 % avoid that floats are placed above its sections
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+\usepackage{tikz} 
 \end_preamble
 \options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
 \use_default_options true
@@ -329,8 +331,250 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename density_notch_state.jpg
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-2,0) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-1,0) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-0,0) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw (1,0) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-2,-1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-1,-1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw (0,-1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (1,-1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-2,-2) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw (-1,-2) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (0,-2) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (1,-2) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-1,-3) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (0,-3) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (1,-3) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-1,-4) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (0,-4) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw (1,-4) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (2,-4) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-1,-5) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw (0,-5) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (1,-5) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (2,-5) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw (-1,-6) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (0,-6) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (1,-6) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (2,-6) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[dashed] (0,-3.5) -- (0,-2.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
 
 \end_inset
 
@@ -515,7 +759,7 @@ Evidently,
 
 \begin_layout Standard
 This is a fourier transform! To go from momentum space to position space,
- like in our case, we do
+ like in our case, we can do
 \end_layout
 
 \begin_layout Standard

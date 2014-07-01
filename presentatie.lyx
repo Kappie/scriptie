@@ -903,7 +903,7 @@ position
 \begin_layout Standard
 \begin_inset Formula 
 \[
-|\Psi\rangle=\frac{1}{\sqrt{N}}\sum_{m=-N}^{N}|P\rangle
+|\Psi\rangle=\sum_{m=-N}^{N}|P\rangle
 \]
 
 \end_inset
@@ -1227,12 +1227,27 @@ Expectation value of particle density operator
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\langle\Psi|\rho(x)|\Psi\rangle=\sum_{m,m'=-N}^{N}e^{i(P-P')x-i(E_{m}-E_{m'})t}\langle P|\rho(0)|P'\rangle
+\rho(x,t)=\langle\Psi(t)|\rho(x)|\Psi(t)\rangle=\sum_{m,m'=-N}^{N}e^{i(P-P')x-i(E_{m}-E_{m'})t}\langle P|\rho(0)|P'\rangle
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\langle P|\rho(0)|P'\rangle$
+\end_inset
+
+ and 
+\begin_inset Formula $E$
+\end_inset
+
+ calculated numerically (ABACUS library).
 \end_layout
 
 \begin_layout BeginFrame
@@ -1244,10 +1259,6 @@ Density Profile
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1281,10 +1292,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -1300,10 +1307,6 @@ includemovie{1cm}{1cm}{density_typeII_symmetric_c1N100x50-55_animation_t0-10.gif
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -1314,38 +1317,31 @@ Notch depth
 \end_layout
 
 \begin_layout Standard
-TODO:
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename density_profileWhiteStyle.pdf
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-betere gif (0 < t < 10)
-\end_layout
+\end_inset
 
-\begin_layout Itemize
-sowieso mooiere plaatjes met gnuplot
-\end_layout
 
-\begin_layout Itemize
-Plaatje notch depth
-\end_layout
-
-\begin_layout Itemize
-afleiding stationary phase approx?
-\end_layout
-
-\begin_layout Itemize
-expectation value density operator erin
 \end_layout
 
 \begin_layout Subsection
 \begin_inset Formula $t^{-1}$
 \end_inset
 
- decay behaviour and lifetime parameter 
-\begin_inset Formula $\tau$
-\end_inset
-
-
+ decay behaviour
 \end_layout
 
 \begin_layout BeginFrame
@@ -1363,20 +1359,12 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename notch_depth_c1N100t0-10WhiteStyle.pdf
 	scale 57
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1526,10 +1514,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename notch_depth_fit_c1N100tbigWhiteStyle.pdf
 	scale 50
@@ -1539,13 +1523,113 @@ status open
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
 
 \end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $c=1$
+\end_inset
+
+, 
+\begin_inset Formula $N=L=100$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=1.18083,B=0.517246
+\]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout BeginFrame
+Derivation of 
+\begin_inset Formula $t^{-1}$
+\end_inset
+
+ Behaviour
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(x,t)=\sum_{m,m'=-N}^{N}e^{i(P-P')x-i(E_{m}-E_{m'})t}\langle P|\rho(0)|P'\rangle
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\approx\int_{\mathbb{R}^{2}}dmdm'A_{m}A_{m'}e^{-i[E(m)-E(m')]t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Stationary Phase Approximation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{\mathbb{R}}dmA_{m}e^{iE(p)t}\approx\frac{\#}{\sqrt{t}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+Double integral gives 
+\begin_inset Formula $\frac{1}{t}$
+\end_inset
+
+ relation.
+\end_layout
+
+\begin_layout BeginFrame
+Summary
+\end_layout
+
+\begin_layout Standard
+Reproduced results of Sato et al.
+\end_layout
+
+\begin_layout Standard
+Found a relation for decay process in large 
+\begin_inset Formula $t$
+\end_inset
+
+ limit with argument.
 \end_layout
 
 \begin_layout EndFrame

@@ -51,6 +51,9 @@
 
 % avoid that floats are placed above its sections
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+
+\usepackage{tikz} 
 \end_preamble
 \options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
 \use_default_options true
@@ -62,7 +65,7 @@ customHeadersFooters
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman lmodern
+\font_roman newcent
 \font_sans lmss
 \font_typewriter lmtt
 \font_default_family default
@@ -124,6 +127,11 @@ customHeadersFooters
 \color #ffff00
 \end_branch
 \branch Appendix
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch chapter-3
 \selected 1
 \filename_suffix 0
 \color #faf0e6
@@ -658,7 +666,19 @@ filename "chapter-2.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\\$
+\begin_inset Branch chapter-3
+status open
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "chapter-3.lyx"
+
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -864,7 +884,7 @@ restore the right header line
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "bibliography"
-options "alpha"
+options "bibtotoc,alpha"
 
 \end_inset
 
