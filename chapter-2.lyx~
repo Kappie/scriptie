@@ -65,7 +65,7 @@ customHeadersFooters
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman lmodern
+\font_roman newcent
 \font_sans lmss
 \font_typewriter lmtt
 \font_default_family default
@@ -287,8 +287,7 @@ Density profile of a quasiparticle state
 In this chapter we'll define a quasiparticle state, or a density notch state.
  This is a state that is localized in position space: it has a sharp notch
  in the density.
- To build such a state from momentum eigenstates, we have to sum over all
- of them.
+ To build such a state from momentum eigenstates, we have to sum over them.
  Let 
 \begin_inset Formula $|P\rangle$
 \end_inset
@@ -316,7 +315,7 @@ In this chapter we'll define a quasiparticle state, or a density notch state.
 \begin_layout Standard
 \begin_inset Formula 
 \[
-|X\rangle=\frac{1}{\sqrt{N}}\sum_{p=-N}^{N}e^{-2\pi ipq/N}|P\rangle
+|\Psi\rangle=\frac{1}{\sqrt{N}}\sum_{p=-N}^{N}e^{-2\pi ipq/N}|P\rangle
 \]
 
 \end_inset
@@ -602,13 +601,17 @@ Visual representation of the density notch state for
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+This gives a state with a density profile that has a notch at position 
+\begin_inset Formula $\frac{qL}{N}+\frac{L}{2}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard

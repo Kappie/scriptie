@@ -279,7 +279,7 @@ thepage
 
 \end_layout
 
-\begin_layout Chapter
+\begin_layout Section
 Density profile of a quasiparticle state
 \end_layout
 
@@ -612,6 +612,14 @@ This gives a state with a density profile that has a notch at position
 \end_inset
 
 .
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Japanese2"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

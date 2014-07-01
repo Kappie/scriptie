@@ -65,7 +65,7 @@ customHeadersFooters
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman lmodern
+\font_roman newcent
 \font_sans lmss
 \font_typewriter lmtt
 \font_default_family default
@@ -194,88 +194,43 @@ document
 
 \end_layout
 
-\begin_layout Subject
-Thesis to get the degree of a doctor of philosophy
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Use the official terms and title page layout of your university instead
- of this one!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Title
 Title of the thesis
 \end_layout
 
-\begin_layout Subtitle
-Subtitle (if you have one)
-\end_layout
-
 \begin_layout Author
-Your name
+Geert Kapteijns
 \end_layout
 
 \begin_layout Date
 Date (optional)
 \end_layout
 
-\begin_layout Publishers
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "40col%"
-special "none"
-height "1in"
-height_special "totalheight"
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-Replace this box e.
-\begin_inset space \thinspace{}
-\end_inset
 
-g.
-\begin_inset space ~
-\end_inset
-
-by the coat of arms of the university.
 \end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename Natuurwetenschappen.jpg
+
+\end_inset
 
 
-\backslash
-vspace{
-\backslash
-baselineskip}
 \end_layout
 
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
-Bla bla University Testburg
-\begin_inset Newline newline
-\end_inset
-
+\begin_layout Publishers
 Faculty for leading edge science
 \begin_inset Newline newline
 \end_inset
@@ -884,7 +839,7 @@ restore the right header line
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "bibliography"
-options "alpha"
+options "bibtotoc,alpha"
 
 \end_inset
 
