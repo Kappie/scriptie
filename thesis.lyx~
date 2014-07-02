@@ -195,19 +195,17 @@ document
 \end_layout
 
 \begin_layout Title
-Title of the thesis
-\end_layout
-
-\begin_layout Subtitle
-
+Dynamics of quasi-particle states in a finite one-dimensional repulsive
+ Bose gas
 \end_layout
 
 \begin_layout Author
-Geert Kapteijns
+Geert Kapteijns (10246479)
 \end_layout
 
 \begin_layout Date
-Date (optional)
+Bachelor's thesis Natuur‐ en Sterrenkunde, 15 EC, 31‐03‐2014 - 12-07-2014 
+ 
 \end_layout
 
 \begin_layout Publishers
@@ -255,7 +253,7 @@ baselineskip}
 \begin_inset Newline newline
 \end_inset
 
-Bla bla University Testburg
+University of Amsterdam
 \begin_inset Newline newline
 \end_inset
 
@@ -269,7 +267,7 @@ Bla bla University Testburg
 \begin_layout Lowertitleback
 
 \series bold
-Dean
+First supervisor
 \series default
 
 \begin_inset VSpace smallskip
@@ -281,7 +279,7 @@ Dean
 
 Prof.
  Dr.
- xxx yyy
+ Jean-Sébastien Caux
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -291,7 +289,7 @@ Prof.
 
 
 \series bold
-Referees
+Second supervisor
 \series default
 
 \begin_inset VSpace smallskip
@@ -301,39 +299,12 @@ Referees
 \begin_inset Newline newline
 \end_inset
 
-Prof.
- Dr.
- aaa bbb
+Dr.
+ Davide Fioretto
 \begin_inset VSpace smallskip
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
-
-Prof.
- Dr.
- xxx yyy
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\series bold
-Date of the graduation (optional)
-\series default
-
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-xx.yy.zzzz
 \end_layout
 
 \begin_layout Dedication

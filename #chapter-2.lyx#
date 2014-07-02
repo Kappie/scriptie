@@ -897,9 +897,9 @@ to shift the eigenstates
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\rho(x,t)=\frac{1}{N}\sum_{p,p=-N}^{N}\langle P|\hat{\rho}(0)|P'\rangle e^{i(P-P')x-i(E_{p}-E_{p'})t}
-\]
+\begin{equation}
+\rho(x,t)=\frac{1}{N}\sum_{p,p=-N}^{N}\langle P|\hat{\rho}(0)|P'\rangle e^{i(P-P')x-i(E_{p}-E_{p'})t}\label{eq:density}
+\end{equation}
 
 \end_inset
 
@@ -911,7 +911,196 @@ The form factors
 \begin_inset Formula $\langle P|\hat{\rho}(0)|P\rangle$
 \end_inset
 
+ can be calculated by Slavnov's formula 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Slav89"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Slav90"
+
+\end_inset
+
+, and the Gaudin-Korepin norm formula 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kore93"
+
+\end_inset
+
+.
+ The energy eigenvalues of the one-hole excitations 
+\begin_inset Formula $E_{p}$
+\end_inset
+
+ can be calculated by solving the Bethe equations numerically.
+ Both the form factors and the energy eigenvalues have been computed with
+ the ABACUS library, written by Jean-Sébastien Caux.
+\end_layout
+
+\begin_layout Standard
+By numerically evaluating 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:density"
+
+\end_inset
+
+, a movie of the density profile can be created.
  
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename density_notch_t0.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Scatter plot of the density profile for 
+\begin_inset Formula $N=L=100$
+\end_inset
+
+, 
+\begin_inset Formula $c=1$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The density notch collapses and vanishes into the sea of particles.
+ With this data, the findings of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Japanese1"
+
+\end_inset
+
+ have been reproduced, but with a symmetric summation of momentum eigenstates
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:density_notch_state"
+
+\end_inset
+
+), instead of a summation of only one-hole excitations with positive momentum,
+ i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+|\Psi\rangle=\frac{1}{\sqrt{N}}\sum_{p=1}^{N}|P\rangle\label{eq:density_notch_state_asymmetric}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Notch depth as function of time
+\end_layout
+
+\begin_layout Standard
+We define the notch depth 
+\begin_inset Formula $d$
+\end_inset
+
+ as the equilibrium density minus lowest density.
+ The density notch is initially located at 
+\begin_inset Formula $\frac{L}{2}$
+\end_inset
+
+ (since we have set 
+\begin_inset Formula $q=0$
+\end_inset
+
+), but splits into two notches that move into opposite directions with speed
+ approximately 
+\begin_inset Formula $\frac{2\pi}{L}$
+\end_inset
+
+.
+ This approximation holds as long as the notch is has not collapsed, i.e.
+ the quasi-particle is intact.
+ By taking the limit 
+\begin_inset Formula $c\rightarrow0$
+\end_inset
+
+, a non-collapsing notch can be created that shows soliton like behaviour,
+ like a constant speed 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Japanese3"
+
+\end_inset
+
+.
+ The initial state in the referenced article is of the form 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:density_notch_state_asymmetric"
+
+\end_inset
+
+, so its density profile features a notch that travels in the positive direction.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
