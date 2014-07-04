@@ -136,6 +136,11 @@ customHeadersFooters
 \filename_suffix 0
 \color #faf0e6
 \end_branch
+\branch Introduction
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -305,10 +310,6 @@ Dr.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Dedication
-Dedication, cite from a famous person, or whatever you like (optional)
 \end_layout
 
 \begin_layout Standard

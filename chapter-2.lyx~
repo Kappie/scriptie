@@ -306,7 +306,7 @@ In this chapter we'll define a quasiparticle state, or a density notch state.
 
 .
  The density notch state 
-\begin_inset Formula $|X\rangle$
+\begin_inset Formula $|\Psi\rangle$
 \end_inset
 
  for 
@@ -959,7 +959,8 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename density_notch_t0.pdf
+	filename density_decay.jpg
+	scale 50
 
 \end_inset
 
@@ -1000,7 +1001,27 @@ key "Japanese1"
 
 \end_inset
 
- have been reproduced.
+ have been reproduced, but with a symmetric summation of momentum eigenstates
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:density_notch_state"
+
+\end_inset
+
+), instead of a summation of only one-hole excitations with positive momentum,
+ i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+|\Psi\rangle=\frac{1}{\sqrt{N}}\sum_{p=1}^{N}|P\rangle\label{eq:density_notch_state_asymmetric}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1034,7 +1055,7 @@ We define the notch depth
 \end_inset
 
 , a non-collapsing notch can be created that shows soliton like behaviour,
- like a constant speed 
+ such as constant speed 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Japanese3"
@@ -1042,9 +1063,75 @@ key "Japanese3"
 \end_inset
 
 .
- The initial state in the referenced article is created by summing over
- only one-hole excitations with positive momentum, so its density profile
- features a notch that travels in the positive direction.
+ The initial state in the referenced article is of the form 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:density_notch_state_asymmetric"
+
+\end_inset
+
+, so its density profile features a notch that travels in the positive direction.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename density_depth_decay_c1-8.pdf
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Notch depth decay for 
+\begin_inset Formula $N=L=100$
+\end_inset
+
+, 
+\begin_inset Formula $c=1$
+\end_inset
+
+ (blue dots), 
+\begin_inset Formula $c=2$
+\end_inset
+
+ (red dots), 
+\begin_inset Formula $c=4$
+\end_inset
+
+ (yellow dots), 
+\begin_inset Formula $c=8$
+\end_inset
+
+ (green dots).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quasi-particle states with a higher interaction parameter 
+\begin_inset Formula $c$
+\end_inset
+
+ show a faster decay.
 \end_layout
 
 \begin_layout Standard

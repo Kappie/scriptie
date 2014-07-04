@@ -115,20 +115,33 @@ adds table of contents entry
 \begin_layout Standard
 The Lieb-Liniger model for a one-dimensional ultra cold Bose gas is briefly
  explained.
- An initial state with a notch in the density profile is studied.
+ An initial state with a notch in its density profile is studied.
  It is demonstrated that the time evolution of this initial state resembles
  a classical relaxation process.
- Numerical calculations show that the decay of the notch depth obeys a 
+ Numerical calculation show that the decay of the notch depth obeys a 
 \begin_inset Formula $\frac{1}{t}$
 \end_inset
 
  relationship.
- Using the stationary phase approximation, it is shown that this behaviour
- is to be expected for large 
-\begin_inset Formula $t$
-\end_inset
+ Using the stationary phase approximation
+\end_layout
 
-.
+\begin_layout Standard
+It is demonstrated that the dynamics of a quasi particle initial state in
+ a one dimensional ultra cold Bose gas resemble a classical relaxation process.
+ 
+\end_layout
+
+\begin_layout Standard
+The Lieb-Liniger model describes a gas of particles in one dimension with
+ a contact interaction.
+ I studied the dynamics of an initial state that is localized in space and
+ can be thought of as a quasi-particle.
+ An approximation suggests that for large t, the quasi-particle decays with
+ 1/t.
+ Simulations show a good ﬁt and give values for the lifetime parameter of
+ the quasi-particle under diﬀerent initial conditions.
+ 
 \end_layout
 
 \end_body

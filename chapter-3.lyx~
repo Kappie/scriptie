@@ -278,7 +278,182 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Derivation of the decay behaviour of the quasi-particle
+Decay behaviour of the quasi-particle
+\end_layout
+
+\begin_layout Standard
+In this chapter we will investigate the decay behaviour shown in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Notch-depth-decay"
+
+\end_inset
+
+.
+ We will show that for large 
+\begin_inset Formula $t$
+\end_inset
+
+, a 
+\begin_inset Formula $\frac{1}{t}$
+\end_inset
+
+ decay is expected.
+ We need to evaluate the expression:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(x,t)=\frac{1}{N}\sum_{p,p=-N}^{N}\langle P|\hat{\rho}(0)|P'\rangle e^{i(P-P')x-i(E_{p}-E_{p'})t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+First, we will approximate this double sum as a double integral.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{N}\sum_{p,p=-N}^{N}\langle P|\hat{\rho}(0)|P'\rangle e^{i(P-P')x-i(E_{p}-E_{p'})t}=\frac{1}{N}\int_{\mathbb{R}^{2}}dpdp'A_{p}A_{p'}e^{-iE_{p}t}e^{iE_{p}t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This integral can be approximated with a stationary phase approximation,
+ which we will briefly review.
+\end_layout
+
+\begin_layout Section
+Stationary phase approximation
+\end_layout
+
+\begin_layout Standard
+We can approximate oscillatory integrals of the following form:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\int dpg(p)e^{itf(p)},\qquad t\gg1\label{eq:oscillatory_integral}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We will take advantage of the fact that in regions where 
+\begin_inset Formula $\frac{\partial f}{\partial p}\neq0$
+\end_inset
+
+, the oscillating function 
+\begin_inset Formula $e^{itf(p)}$
+\end_inset
+
+ kills the integral by destructive interference.
+ So only the tiny regions around certain dominant frequencies 
+\begin_inset Formula $\omega_{i}$
+\end_inset
+
+ at which 
+\begin_inset Formula $\frac{\partial f}{\partial p}=0$
+\end_inset
+
+ contribute to the value of the integral.
+ In these regions, 
+\begin_inset Formula $g(p)$
+\end_inset
+
+ is essentially constant and we Taylor-expand 
+\begin_inset Formula $f(p)$
+\end_inset
+
+ to second order:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(p)=f(\omega)+\frac{f''(\omega)}{2}(p-\omega)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, the first order term is zero by definition of the points 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\ref{eq:oscillatory_integral}$
+\end_inset
+
+ can be approximated as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i}g(\omega_{i})e^{itf(\omega_{i})}\int_{\mathbb{R}}dpe^{it\frac{f''(\omega_{i})}{2}(p-\omega_{i})^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $t$
+\end_inset
+
+ is large, even a small difference 
+\begin_inset Formula $p-\omega_{i}$
+\end_inset
+
+ leads to a highly oscillating integrand, resulting in no contribution to
+ the total value of the integral.
+ This allows us to freely expand the limits of the resulting integrals to
+ 
+\begin_inset Formula $-\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $\infty$
+\end_inset
+
+.
+ They are easily evaluated (after shifting 
+\begin_inset Formula $\bar{p}=p-\omega_{i})$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{\mathbb{R}}d\bar{p}e^{it\frac{f''(\omega_{i})}{2}\bar{p}^{2}}=\sqrt{\frac{2\pi}{-itf''(\omega_{i})}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -297,9 +472,9 @@ In this chapter I will use a stationary phase approximation to show that
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\int_{\mathbb{R}}dpA_{p}e^{iE(p)t}
-\]
+\begin{equation}
+\int_{\mathbb{R}}dpA_{p}e^{iE(p)t}\label{eq:1d_momentum_integral}
+\end{equation}
 
 \end_inset
 
@@ -446,12 +621,29 @@ We can still integrate over the whole real line for large
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{\#}{\sqrt{t}}\int_{\mathbb{R}}d\bar{p}e^{\frac{i}{2}\bar{p}^{2}}=\frac{\#}{\sqrt{t}}
+\frac{\#}{\sqrt{t}}\int_{\mathbb{R}}d\bar{p}e^{\frac{i}{2}\bar{p}^{2}}
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Since this is a standard variable that does not depend on 
+\begin_inset Formula $t$
+\end_inset
+
+, we can conclude that our original expression, 
+\begin_inset Formula $\ref{eq:1d_momentum_integral}$
+\end_inset
+
+, has a 
+\begin_inset Formula $t^{-\frac{1}{2}}$
+\end_inset
+
+ dependence.
+ 
 \end_layout
 
 \begin_layout Standard
