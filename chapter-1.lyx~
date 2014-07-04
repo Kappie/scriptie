@@ -1052,7 +1052,7 @@ x in {-2,...,2} {
 \backslash
 filldraw (
 \backslash
-x,0) circle (0.12cm);
+x,0) circle (0.1cm);
 \end_layout
 
 \begin_layout Plain Layout

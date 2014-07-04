@@ -319,9 +319,9 @@ First, we will approximate this double sum as a double integral.
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\frac{1}{N}\sum_{p,p=-N}^{N}\langle P|\hat{\rho}(0)|P'\rangle e^{i(P-P')x-i(E_{p}-E_{p'})t}=\frac{1}{N}\int_{\mathbb{R}^{2}}dpdp'A_{p}A_{p'}e^{-iE_{p}t}e^{iE_{p}t}
-\]
+\begin{equation}
+\frac{1}{N}\sum_{p,p=-N}^{N}\langle P|\hat{\rho}(0)|P'\rangle e^{i(P-P')x-i(E_{p}-E_{p'})t}=\frac{1}{N}\int_{\mathbb{R}^{2}}dpdp'A_{p}A_{p'}e^{-iE(p)t}e^{iE(p')t}\label{eq:double_density_integral}
+\end{equation}
 
 \end_inset
 
@@ -438,13 +438,17 @@ When
 \end_inset
 
 .
- They are easily evaluated:
+ They are easily evaluated (after shifting 
+\begin_inset Formula $\bar{p}=p-\omega_{i})$
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\int_{\mathbb{R}}dpe^{it\frac{f''(\omega_{i})}{2}(p-\omega_{i})^{2}}=
+\int_{\mathbb{R}}d\bar{p}e^{it\frac{f''(\omega_{i})}{2}\bar{p}^{2}}=\sqrt{\frac{2\pi}{-itf''(\omega_{i})}}
 \]
 
 \end_inset
@@ -452,9 +456,13 @@ When
 
 \end_layout
 
+\begin_layout Section
+Approximation of decay behaviour using the stationary phase approximation
+\end_layout
+
 \begin_layout Standard
-In this chapter I will use a stationary phase approximation to show that
- the notch depth decays as 
+Now we will use a stationary phase approximation to show that the notch
+ depth decays as 
 \begin_inset Formula $\frac{1}{t}$
 \end_inset
 
@@ -462,14 +470,18 @@ In this chapter I will use a stationary phase approximation to show that
 \begin_inset Formula $t$
 \end_inset
 
-, as the simulation shows.
- We start with:
+.
+ 
+\begin_inset Formula $\ref{eq:double_density_integral}$
+\end_inset
+
+ consists of two integrals of the form:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\int_{\mathbb{R}}dpA_{p}e^{iE(p)t}\label{eq:1d_momentum_integral}
+\int_{\mathbb{R}}dpA(p)e^{iE(p)t}\label{eq:momentum_integral}
 \end{equation}
 
 \end_inset
@@ -478,80 +490,99 @@ In this chapter I will use a stationary phase approximation to show that
 \end_layout
 
 \begin_layout Standard
-This is an oscillatory integral with phase term 
-\begin_inset Formula $\phi=E(p)t$
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename energies_typeII_symmetric_c1N100.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Energy spectrum of the eigenstates of the 
+\begin_inset Formula $N=L=100$
+\end_inset
+
+, 
+\begin_inset Formula $c=1$
+\end_inset
+
+ quasi particle state.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Energy-spectrum"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Energy-spectrum"
+
+\end_inset
+
+ shows that our oscillatory term 
+\begin_inset Formula $E(p)$
+\end_inset
+
+ has two dominant frequencies at which 
+\begin_inset Formula $\frac{dE}{dp}=0$
 \end_inset
 
 .
- We take 
-\begin_inset Formula $A_{p}$
-\end_inset
-
- to be constant.
- The values of 
-\begin_inset Formula $p$
-\end_inset
-
- for which 
-\begin_inset Formula $\phi$
-\end_inset
-
- varies rapidly do not contribute to the integral.
- We focus on the values of 
-\begin_inset Formula $p$
-\end_inset
-
- for which the phase term is stationary, that is 
-\begin_inset Formula $\frac{d\phi}{dp}=0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\frac{d\phi}{dp}=\frac{dE(p)}{dp}t=0\implies\frac{dE(p)}{dp}=0
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We call the 
-\begin_inset Formula $p$
-\end_inset
-
- that satisfy this equation 
-\begin_inset Formula $p_{L}$
+ We label them 
+\begin_inset Formula $p_{+}$
 \end_inset
 
  and 
-\begin_inset Formula $p_{R}$
-\end_inset
-
-, since it turns out there are two such 
-\begin_inset Formula $p$
+\begin_inset Formula $p_{-}$
 \end_inset
 
 .
- Continue for 
-\begin_inset Formula $p_{L}=p$
+ We will focus on the frequency 
+\begin_inset Formula $p_{+}$
 \end_inset
 
-, argument for 
-\begin_inset Formula $p_{R}$
+ and keep in mind that the reasoning for 
+\begin_inset Formula $p_{-}$
 \end_inset
 
- analogous.
- Now expand 
-\begin_inset Formula $\phi$
+ is analogous.
+\end_layout
+
+\begin_layout Standard
+We expand 
+\begin_inset Formula $E$
 \end_inset
 
  about 
-\begin_inset Formula $p=p_{L}$
+\begin_inset Formula $p=p_{+}$
 \end_inset
 
  to second order:
@@ -560,7 +591,7 @@ We call the
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\phi\approx E(p_{L})t+\frac{1}{2}\frac{d^{2}E}{dp^{2}}(p_{L})t(p_{L}-p)^{2}\equiv E(p_{L})t+\frac{1}{2}\alpha t(p_{L}-p)^{2}
+E(p)\approx E(p_{+})+\frac{1}{2}\frac{d^{2}E}{dp^{2}}(p_{+})(p-p_{+})^{2}\equiv E(p_{+})+\frac{1}{2}\alpha(p_{L}-p)^{2}
 \]
 
 \end_inset
@@ -569,13 +600,18 @@ We call the
 \end_layout
 
 \begin_layout Standard
-We now have the integral:
+Here, we have defined 
+\begin_inset Formula $\alpha\equiv\frac{d^{2}E}{dp^{2}}(p_{+})$
+\end_inset
+
+.
+ We now have the integral:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\int_{\mathbb{R}}dpA_{p}e^{it[E(p_{L})+\frac{1}{2}\alpha(p-p_{L})^{2}]}=\#\int_{\mathbb{R}}dpe^{\frac{it\alpha}{2}p{}^{2}}
+\int_{\mathbb{R}}dpA(p_{+})e^{it[E(p_{+})+\frac{1}{2}\alpha(p-p_{+})^{2}]}=\#\int_{\mathbb{R}}dpe^{\frac{it\alpha}{2}p{}^{2}}
 \]
 
 \end_inset
@@ -584,16 +620,6 @@ We now have the integral:
 \end_layout
 
 \begin_layout Standard
-We can still integrate over the whole real line for large 
-\begin_inset Formula $t$
-\end_inset
-
-, since then even a small difference 
-\begin_inset Formula $(p-p_{L})$
-\end_inset
-
- leads to rapid oscillations of the integrand.
- 
 \begin_inset Formula $\#$
 \end_inset
 
@@ -626,20 +652,119 @@ We can still integrate over the whole real line for large
 \end_layout
 
 \begin_layout Standard
-Since this is a standard variable that does not depend on 
+Since we are left with an integral that does not depend on 
 \begin_inset Formula $t$
 \end_inset
 
 , we can conclude that our original expression, 
-\begin_inset Formula $\ref{eq:1d_momentum_integral}$
+\begin_inset Formula $\ref{eq:momentum_integral}$
 \end_inset
 
 , has a 
-\begin_inset Formula $t^{-\frac{1}{2}}$
+\begin_inset Formula $\frac{1}{\sqrt{t}}$
 \end_inset
 
  dependence.
- 
+ The expression for the density,
+\begin_inset Formula $\ref{eq:double_density_integral}$
+\end_inset
+
+ consists of two such integrals, so we expect the density to decay as 
+\begin_inset Formula $\frac{1}{t}$
+\end_inset
+
+ in the large 
+\begin_inset Formula $t$
+\end_inset
+
+ limit.
+\end_layout
+
+\begin_layout Section
+\begin_inset Formula $\frac{1}{t}$
+\end_inset
+
+ fit to numerically calculated notch depth
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename notch_depth_fit_c1N100tbig.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Fit to numerically calculated values of the notch depth for 
+\begin_inset Formula $N=L=100$
+\end_inset
+
+, 
+\begin_inset Formula $c=1$
+\end_inset
+
+.
+ Only the values for 
+\begin_inset Formula $t$
+\end_inset
+
+ for which the peak is smaller than 
+\begin_inset Formula $\frac{1}{e}$
+\end_inset
+
+ of the original depth have been taken into account.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
