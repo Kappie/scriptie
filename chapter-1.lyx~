@@ -619,25 +619,15 @@ Solution for general N
 \end_layout
 
 \begin_layout Standard
-TODO:
-\end_layout
+For a more complete treatment, see 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Franchini"
 
-\begin_layout Standard
-- Why do we make the Bethe Ansatz?
-\end_layout
+\end_inset
 
-\begin_layout Standard
-- Why do we assume a superposition of plane waves? - Why do we only consider
- one ordering of the particles? Explain the symmetry.
-\end_layout
-
-\begin_layout Standard
---------------------------------------------------------------------------------
------------------------
-\end_layout
-
-\begin_layout Standard
-Our assumption for the wavefunction is 
+.
+ Our assumption for the wavefunction is 
 \end_layout
 
 \begin_layout Standard
@@ -857,14 +847,6 @@ TODO:
 \end_layout
 
 \begin_layout Standard
-- Refer to notes by Fabio Franchini
-\end_layout
-
-\begin_layout Standard
-- Refer to proof of uniqueness
-\end_layout
-
-\begin_layout Standard
 - No degeneracy means no level crossing because...?
 \end_layout
 
@@ -918,8 +900,14 @@ Setting
 \begin_inset Formula $k_{1}=k_{2}$
 \end_inset
 
- satisfies the above equation, and since it can be proved (REF) that for
- a given set of 
+ satisfies the above equation, and since it can be proved (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CauxNotes"
+
+\end_inset
+
+) that for a given set of 
 \begin_inset Formula $I_{j}$
 \end_inset
 

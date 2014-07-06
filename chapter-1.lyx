@@ -284,8 +284,8 @@ Description of the Lieb-Liniger model
 \end_layout
 
 \begin_layout Standard
-I have studied the Lieb-Liniger model, a model of particles that can move
- in one dimension.
+We will describe an ultra cold Bose gas in one dimension with the Lieb-Liniger
+ model.
  This is the Hamiltonian in the appropriate units:
 \end_layout
 
@@ -619,7 +619,15 @@ Solution for general N
 \end_layout
 
 \begin_layout Standard
-Our assumption for the wavefunction is 
+For a more complete treatment, see 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Franchini"
+
+\end_inset
+
+.
+ Our assumption for the wavefunction is 
 \end_layout
 
 \begin_layout Standard
@@ -839,14 +847,6 @@ TODO:
 \end_layout
 
 \begin_layout Standard
-- Refer to notes by Fabio Franchini
-\end_layout
-
-\begin_layout Standard
-- Refer to proof of uniqueness
-\end_layout
-
-\begin_layout Standard
 - No degeneracy means no level crossing because...?
 \end_layout
 
@@ -900,8 +900,14 @@ Setting
 \begin_inset Formula $k_{1}=k_{2}$
 \end_inset
 
- satisfies the above equation, and since it can be proved (REF) that for
- a given set of 
+ satisfies the above equation, and since it can be proved (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CauxNotes"
+
+\end_inset
+
+) that for a given set of 
 \begin_inset Formula $I_{j}$
 \end_inset
 
