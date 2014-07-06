@@ -1,0 +1,1726 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+% increase link area for cross-references and autoname them
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\newlength{\abc}
+\settowidth{\abc}{\space}
+\AtBeginDocument{%
+\addto\extrasenglish{
+ \renewcommand{\equationautorefname}{\hspace{-\abc}}
+ \renewcommand{\sectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsubsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\figureautorefname}{Fig.\negthinspace}
+ \renewcommand{\tableautorefname}{Tab.\negthinspace}
+}
+}
+
+% in case somebody want to have the label "Gleichung"
+%\renewcommand{\eqref}[1]{Gleichung~(\negthinspace\autoref{#1})}
+
+% put the link to figure floats to the beginning
+% of the figure and not to its end
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a pdf-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% make caption labels bold
+\setkomafont{captionlabel}{\bfseries}
+\setcapindent{1em}
+
+% enable calculations
+\usepackage{calc}
+
+% fancy page header/footer settings
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+% increase the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoid that floats are placed above its sections
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+\usepackage{tikz} 
+\end_preamble
+\options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
+\use_default_options true
+\master thesis.lyx
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman newcent
+\font_sans helvet
+\font_typewriter lmtt
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "Your title"
+\pdf_author "Your name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\branch NoChildDocument
+\selected 0
+\filename_suffix 0
+\color #ff0000
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+chaptername
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thechapter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+rightmark
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Enable page headers and add the chapter to the header line.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Header
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+leftmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Footer
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Center Footer
+
+\end_layout
+
+\begin_layout Right Footer
+\begin_inset Argument
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Description of the Lieb-Liniger model
+\end_layout
+
+\begin_layout Standard
+We will describe an ultra cold Bose gas in one dimension with the Lieb-Liniger
+ model.
+ This is the Hamiltonian in the appropriate units:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H=-\sum_{i=1}^{N}\frac{\partial^{2}}{\partial x_{i}^{2}}+2c\sum_{i<j}\delta(x_{i}-x_{j})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The two particle case
+\end_layout
+
+\begin_layout Standard
+Let's start with the two particle case.
+ We get:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H=-\frac{\partial^{2}}{\partial x_{1}^{2}}-\frac{\partial^{2}}{\partial x_{2}^{2}}+2c\delta(x_{1}-x_{2})=-\frac{1}{2}(\frac{\partial^{2}}{\partial\alpha^{2}}+\frac{\partial^{2}}{\partial\beta^{2}})+2c\delta(\alpha)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here 
+\begin_inset Formula $\alpha=x_{1}-x_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta=x_{1}+x_{2}$
+\end_inset
+
+.
+ If we substitute this into 
+\begin_inset Formula $H\Psi=E\Psi$
+\end_inset
+
+, and integrate both sides from 
+\begin_inset Formula $-\epsilon$
+\end_inset
+
+ to 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ in 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, we get:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\frac{1}{2}\int_{-\epsilon}^{\epsilon}d\alpha(\frac{\partial^{2}}{\partial\alpha^{2}}+\frac{\partial^{2}}{\partial\beta^{2}})\Psi+2c\int_{-\epsilon}^{\epsilon}d\alpha\delta(\alpha)\Psi=\int_{-\epsilon}^{\epsilon}d\alpha E\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, taking the limit 
+\begin_inset Formula $\epsilon\rightarrow0$
+\end_inset
+
+, the right side becomes zero, and we see:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{\epsilon\rightarrow0}-\frac{1}{2}\int_{-\epsilon}^{\epsilon}d\alpha(\frac{\partial^{2}}{\partial\alpha^{2}}+\frac{\partial^{2}}{\partial\beta^{2}})\Psi+2c\int_{-\epsilon}^{\epsilon}d\alpha\delta(\alpha)\Psi=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From which it follows that:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{\epsilon\rightarrow0}4c\int_{-\epsilon}^{\epsilon}d\alpha\delta(\alpha)\Psi=4c\Psi(\alpha=0)=\lim_{\epsilon\rightarrow0}\int_{-\epsilon}^{\epsilon}d\alpha(\frac{\partial^{2}}{\partial\alpha^{2}}+\frac{\partial^{2}}{\partial\beta^{2}})\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\lim_{\epsilon\rightarrow0}\frac{\partial}{\partial\alpha}\Psi(\alpha=\epsilon)-\frac{\partial}{\partial\alpha}\Psi(\alpha=-\epsilon)=\Delta\frac{\partial}{\partial\alpha}\Psi(\alpha=0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, for the discontinuity at 
+\begin_inset Formula $x_{1}=x_{2}$
+\end_inset
+
+ (
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+) we have:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Delta\frac{\partial}{\partial\alpha}\Psi(\alpha=0)=4c\Psi(\alpha=0)\label{eq:discontinuity}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assuming the wavefunction:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Psi(x_{1},x_{2})=\begin{cases}
+A_{+}e^{i(k_{1}x_{1}+k_{2}x_{2})}+A_{-}e^{i(k_{2}x_{1}+k_{1}x_{2})} & x_{1}<x_{2}\\
+A_{-}e^{i(k_{1}x_{1}+k_{2}x_{2})}+A_{+}e^{i(k_{2}x_{1}+k_{1}x_{2})} & x_{1}>x_{2}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and solving 
+\begin_inset Formula $\ref{eq:discontinuity}$
+\end_inset
+
+ we find:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A_{+}=e^{-\frac{i}{2}\phi(k_{1}-k_{2})},\qquad\qquad A_{-}=-e^{\frac{i}{2}\phi(k_{1}-k_{2})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\phi(k)=2\arctan\frac{k}{c}\label{eq:scattering_phase_shift}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+is known as the
+\shape italic
+ scattering phase shift
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+Now, if we impose periodic boundary conditions 
+\begin_inset Formula $\Psi(x,0)=\Psi(x,L)$
+\end_inset
+
+ (this also assumes a symmetric wavefunction), where 
+\begin_inset Formula $L$
+\end_inset
+
+ is the system length, we find a quantization for the momenta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{ik_{1}L}=e^{-i\phi(k_{1}-k_{2})},\qquad\qquad e^{ik_{2}L}=-e^{-i\phi(k_{2}-k_{1})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The above equations are the Bethe equations for two particles.
+ Let's do a sanity check.
+ In the limit 
+\begin_inset Formula $c\rightarrow0$
+\end_inset
+
+, we get:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{ik_{1}L}=e^{ik_{2}L}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Which leads to the momentum quantization for particles on a ring of length
+ L without interaction:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k_{1}L=2\pi n_{1},\qquad\qquad k_{2}L=2\pi n_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ are integers.
+\end_layout
+
+\begin_layout Standard
+Let's compute the energy and momentum of an eigenstate, that is labeled
+ by a set 
+\begin_inset Formula $\{k_{j}\}.$
+\end_inset
+
+ For the energy, we compute 
+\begin_inset Formula $H\Psi|_{x_{1}<x_{2}}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H\Psi=(-\frac{\partial^{2}}{\partial x_{1}^{2}}-\frac{\partial^{2}}{\partial x_{2}^{2}})(A_{+}e^{i(k_{1}x_{1}+k_{2}x_{2})}+A_{-}e^{i(k_{2}x_{1}+k_{1}x_{2})})=(k_{1}^{2}+k_{2}^{2})\Psi=E\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For the total momentum, we compute the eigenvalue of the momentum operator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{P}=-i\sum_{j=1}^{N}\frac{\partial}{\partial x_{j}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{P}\Psi=-i(\frac{\partial}{\partial x_{1}}+\frac{\partial}{\partial x_{2}})(A_{+}e^{i(k_{1}x_{1}+k_{2}x_{2})}+A_{-}e^{i(k_{2}x_{1}+k_{1}x_{2})})=(k_{1}+k_{2})\Psi=P\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Solution for general N
+\end_layout
+
+\begin_layout Standard
+For a more complete treatment, see 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Franchini"
+
+\end_inset
+
+.
+ Our assumption for the wavefunction is 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mbox{\ensuremath{\Psi(x_{1},\dots,x_{N}|k_{1},\dots,k_{N})_{x_{1}<x_{2}<\dots<x_{N}}=\sum_{P_{N}}A_{P}e^{i\sum_{j=1}^{N}k_{P_{j}}x_{j}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, 
+\begin_inset Formula $P_{N}$
+\end_inset
+
+ denotes the permutations of the set of 
+\begin_inset Formula $N$
+\end_inset
+
+ integers.
+ The 
+\begin_inset Formula $A_{P}$
+\end_inset
+
+ can be derived in the same way as the two particle case (by using the discontin
+uity in the derivate of 
+\begin_inset Formula $\Psi$
+\end_inset
+
+.) The complete expression is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Psi(x_{1},\dots,x_{N})=\prod_{N\geq j>k\geq1}sgn(x_{j}-x_{k})\times\sum_{P_{N}}(-1)^{[P]}e^{i\sum_{j=1}^{N}k_{P_{j}}x_{j}+\frac{i}{2}\sum_{N\geq j>k\geq1}sgn(x_{j}-x_{k})\phi(k_{P_{j}}-k_{P_{k}})}\label{eq:wavefunction}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The periodicity conditions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Psi(0,x_{2},\dots,x_{N}|k_{1},\dots,k_{N})=\Psi(x_{2},\dots,x_{N},L|k_{1},\dots,k_{N})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lead to the Bethe equations for general N:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{ik_{j}L}=(-1)^{N-1}e^{-i\sum_{l\neq j}\phi(k_{j}-k_{l})}\qquad j=1,\dots,N
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Which are more conveniently expressed in the log form:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k_{j}L=2\pi I_{j}-\sum_{l=1}^{N}\phi(k_{j}-k_{l})\qquad j=1,\dots,N\label{eq:logform}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where the 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+ are integers when 
+\begin_inset Formula $N$
+\end_inset
+
+ is odd and half-integers when 
+\begin_inset Formula $N$
+\end_inset
+
+ is even.
+ This is easily checked by taking the natural logarithm on both sides of
+ the Bethe equations.
+ From now on, we will use the (half-) integers 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+to label the eigenstates.
+\end_layout
+
+\begin_layout Standard
+The energy and the total momentum generalize as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E=\sum_{j=1}^{N}k_{j}^{2},\qquad\qquad P=\sum_{j=1}^{N}k_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The total momentum can be expressed nicely in terms of 
+\begin_inset Formula $I_{j}.$
+\end_inset
+
+ 
+\begin_inset Formula $\ref{eq:logform}$
+\end_inset
+
+ divided by L gives us:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k_{j}=\frac{1}{L}(2\pi I_{j}-\sum_{l=1}^{N}\phi(k_{j}-k_{l}))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, summing over 
+\begin_inset Formula $j$
+\end_inset
+
+ gives us the total momentum:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P=\sum_{j=1}^{N}k_{j}=\frac{1}{L}\sum_{j=1}^{N}(2\pi I_{j}-\sum_{l=1}^{N}2\arctan\frac{k_{j}-k_{l}}{c})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, I used 
+\begin_inset Formula $\ref{eq:scattering_phase_shift}$
+\end_inset
+
+, the definition of the scattering phase shift.
+ But because 
+\begin_inset Formula $\arctan-x=-\arctan x$
+\end_inset
+
+, the double sum over the scattering phase shifts gives zero.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{j=1}^{N}\sum_{l=1}^{N}2\arctan\frac{k_{j}-k_{l}}{c}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And we are left with:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P=\frac{2\pi}{L}\sum_{j=1}^{N}I_{j}\label{eq:momentum}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The ground state
+\end_layout
+
+\begin_layout Standard
+TODO:
+\end_layout
+
+\begin_layout Standard
+- No degeneracy means no level crossing because...?
+\end_layout
+
+\begin_layout Standard
+------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+Let's try to describe the ground state.
+ First, note that when two 
+\begin_inset Formula $I$
+\end_inset
+
+'s are the same, for example 
+\begin_inset Formula $I_{1}=I_{2}$
+\end_inset
+
+, then also 
+\begin_inset Formula $k_{1}=k_{2}$
+\end_inset
+
+.
+ This can be seen by subtracting the Bethe equations (
+\begin_inset Formula $\ref{eq:logform}$
+\end_inset
+
+) for 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+and 
+\begin_inset Formula $k_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(k_{1}-k_{2})L=2\pi(I_{1}-I_{2})-\sum_{l=1}^{N}\phi(k_{1}-k_{l})-\phi(k_{2}-k_{l})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Setting 
+\begin_inset Formula $k_{1}=k_{2}$
+\end_inset
+
+ satisfies the above equation, and since it can be proved (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CauxNotes"
+
+\end_inset
+
+) that for a given set of 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+, a unique set of 
+\begin_inset Formula $k_{j}$
+\end_inset
+
+ can be found that satisfies the Bethe equations, 
+\begin_inset Formula $k_{1}=k_{2}$
+\end_inset
+
+ does indeed hold.
+\end_layout
+
+\begin_layout Standard
+If any two of the momentum parameters 
+\begin_inset Formula $k_{j}$
+\end_inset
+
+ are the same, 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ is zero.
+ This can be seen from 
+\begin_inset Formula $\ref{eq:wavefunction}$
+\end_inset
+
+, which is asymmetric under the exchange of two momenta.
+ When two 
+\begin_inset Formula $k_{j}$
+\end_inset
+
+ are the same, exchanging them obviously does not change the wave function.
+ But since the asymmetry requires an extra minus sign, we have 
+\begin_inset Formula $\Psi=-\Psi$
+\end_inset
+
+, or 
+\begin_inset Formula $\Psi=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Physically, this can be interpreted as follows: two particles with the same
+ momentum either never meet or, if they have the same position, always coincide,
+ contributing infinitely to the energy due to the 
+\begin_inset Formula $\delta$
+\end_inset
+
+-interaction.
+ This gives an non-physical state and has to be avoided.
+\end_layout
+
+\begin_layout Standard
+So this bosonic model has a fermionic character, in the sense that the momentum
+ quantum numbers that label the eigenstates have to be different to get
+ a non-zero wavefunction.
+\end_layout
+
+\begin_layout Standard
+The ground state is labeled by the following 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+I_{j}=-\frac{N+1}{2}+j\qquad j=1,2,\dots,N\label{eq:groundstate}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+See 
+\begin_inset Formula $\ref{fig:groundstate}$
+\end_inset
+
+ for a visual representation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[dashed] (0,-0.5) -- (0,0.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+foreach 
+\backslash
+x in {-2,...,2} {
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+filldraw (
+\backslash
+x,0) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+A visual representation of the ground state for 
+\begin_inset Formula $N=5$
+\end_inset
+
+.
+ The dashed line denotes zero, a black dot represents a (half) integer 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+ that label this state are -2, -1, 0, 1, 2.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:groundstate"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From 
+\begin_inset Formula $\ref{eq:momentum}$
+\end_inset
+
+ it can be easily checked that this state has zero momentum.
+ To see that this state has the lowest energy, we look first at the case
+ 
+\begin_inset Formula $c\rightarrow\infty$
+\end_inset
+
+.
+ Here, the Bethe equations 
+\begin_inset Formula $\ref{eq:logform}$
+\end_inset
+
+ reduce to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k_{j}L=2\pi I_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+because the scattering phase shifts are all zero.
+ The symmetric distribution of 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+ 
+\begin_inset Formula $\ref{eq:groundstate}$
+\end_inset
+
+ clearly gives the lowest possible energy.
+ If we now decrease the coupling constant 
+\begin_inset Formula $c$
+\end_inset
+
+, the 
+\begin_inset Formula $k_{j}$
+\end_inset
+
+ will change values, because the scattering phase shifts are no longer zero.
+ But since the 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+ are quantized they cannot change.
+ We have already seen that the ground state cannot be degenerate (because
+ for a set 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+, there is a unique solution for the 
+\begin_inset Formula $k_{j}$
+\end_inset
+
+), so there can't be a level crossing upon changing 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\ref{eq:groundstate}$
+\end_inset
+
+ labels the ground state for any 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Excitations of the ground state
+\end_layout
+
+\begin_layout Standard
+We can identify two fundamental excitations of the ground state: adding
+ a particle with momentum 
+\begin_inset Formula $k_{p}$
+\end_inset
+
+ (
+\series bold
+Type I
+\series default
+) and creating a hole (removing a particle) with momentum 
+\begin_inset Formula $k_{h}$
+\end_inset
+
+ (
+\series bold
+Type II
+\series default
+).
+\end_layout
+
+\begin_layout Subsubsection*
+Type I excitations
+\end_layout
+
+\begin_layout Standard
+Let's check what happens when we add a particle with a certain momentum
+ 
+\begin_inset Formula $k_{p}>0$
+\end_inset
+
+ to the ground state for 
+\begin_inset Formula $N=5$
+\end_inset
+
+.
+ We start with the following quantum numbers:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{I_{j}\}=\{-2,-1,0,1,2\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we add a particle, increasing the number of particles from 
+\begin_inset Formula $N$
+\end_inset
+
+ to 
+\begin_inset Formula $N+1$
+\end_inset
+
+.
+ It is important to realize that this excitation changes the quantum numbers
+ 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+ from integers to half integers or the other way around.
+ The new state has quantum numbers
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{I_{j}\}=\{-\frac{5}{2},-\frac{3}{2},-\frac{1}{2},\frac{1}{2},\frac{3}{2},\frac{5}{2}+m\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $m>0$
+\end_inset
+
+ and integer.
+ This new state is created by taking the ground state of 6 particles and
+ increasing by m the momentum of the highest particle.
+ We could also have created the state 
+\begin_inset Formula $\{-\frac{5}{2}-m,-\frac{3}{2},-\frac{1}{2},\frac{1}{2},\frac{3}{2},\frac{5}{2}\}$
+\end_inset
+
+ by adding a particle with negative momentum.
+ In general, for positive momentum, we go from 
+\begin_inset Formula $\ref{eq:groundstate}$
+\end_inset
+
+, the ground state, to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{I_{j}\}=\{-\frac{N}{2},-\frac{N}{2}+1,\dots,\frac{N}{2}+m\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[dashed] (0,-0.5) -- (0,1.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+foreach 
+\backslash
+x in {-2,...,2} {
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+filldraw (
+\backslash
+x,0) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+filldraw (
+\backslash
+x - 0.5,1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw (2.5,1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (3.5,1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Visual representation of a type I excitation of a ground state for 
+\begin_inset Formula $N=5$
+\end_inset
+
+, 
+\begin_inset Formula $m=1$
+\end_inset
+
+.
+ The bottom row represents the ground state and the top row, which has 6
+ particles, represents the excited state.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The momentum of the newly created state is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P=\frac{2\pi}{L}m\label{eq:dressed_momentum}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+whereas the ground state had 
+\begin_inset Formula $P=0$
+\end_inset
+
+.
+ This momentum change 
+\begin_inset Formula $\frac{2\pi}{L}m$
+\end_inset
+
+ is different from 
+\begin_inset Formula $k_{p}$
+\end_inset
+
+, because by adding one particle with momentum 
+\begin_inset Formula $k_{p}$
+\end_inset
+
+, we changed the momentum of all the particles.
+ The momentum 
+\begin_inset Formula $k_{p}$
+\end_inset
+
+ is called the bare momentum, and 
+\begin_inset Formula $P$
+\end_inset
+
+ the observed momentum.
+\end_layout
+
+\begin_layout Subsubsection*
+Type II excitations
+\end_layout
+
+\begin_layout Standard
+In a type II excitation, we remove a particle with momentum 
+\begin_inset Formula $k_{h}$
+\end_inset
+
+, creating a hole.
+ The number of particles decreases from 
+\begin_inset Formula $N$
+\end_inset
+
+ to 
+\begin_inset Formula $N-1$
+\end_inset
+
+.
+ For a hole with positive momentum, we would go from the ground state, 
+\begin_inset Formula $\ref{eq:groundstate}$
+\end_inset
+
+, to the following state: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{I_{j}\}=\{-\frac{N}{2}+1,-\frac{N}{2}+2,\dots,\frac{N}{2}-m-1,\frac{N}{2}-m+1,\dots,\frac{N}{2}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Again, we go from integers to half-integers or vice versa.
+ The new state can be viewed as the ground state for 
+\begin_inset Formula $N-1$
+\end_inset
+
+ particles, but with one momentum 
+\begin_inset Formula $k_{h}$
+\end_inset
+
+ absent, and an extra momentum one level above the highest momentum of the
+ ground state.
+ For our 
+\begin_inset Formula $N=5$
+\end_inset
+
+ example, we would go from the ground state
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{I_{j}\}=\{-2,-1,0,1,2\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+to, for example, the excited state
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{I_{j}\}=\{-\frac{3}{2},-\frac{1}{2},\frac{3}{2},\frac{5}{2}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, 
+\begin_inset Formula $m=2$
+\end_inset
+
+, since we miss the 
+\begin_inset Formula $I=\frac{1}{2}$
+\end_inset
+
+ quantum number.
+ You can check that the dressed momentum is the same as 
+\begin_inset Formula $\ref{eq:dressed_momentum}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw[dashed] (0,-0.5) -- (0,1.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+foreach 
+\backslash
+x in {-2,...,2} {
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+filldraw (
+\backslash
+x,0) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-1.5,1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (-0.5,1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw (0.5,1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (1.5,1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+filldraw (2.5,1) circle (0.1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Visual representation of a type II excitation for 
+\begin_inset Formula $N=5$
+\end_inset
+
+, 
+\begin_inset Formula $m=2$
+\end_inset
+
+.
+ The bottom row represents the ground state and the top row the excited
+ state.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch NoChildDocument
+status collapsed
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "thesisExample"
+options "alpha"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "custom"
+width "2.5cm"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
