@@ -141,6 +141,21 @@ customHeadersFooters
 \filename_suffix 0
 \color #faf0e6
 \end_branch
+\branch Conclusion
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Populaire samenvatting
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch pop sam
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -487,6 +502,29 @@ filename "Summary.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Branch Summary
+status open
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "populaire_samenvatting.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage cleardoublepage
 \end_inset
 
@@ -639,6 +677,25 @@ status open
 \begin_inset CommandInset include
 LatexCommand include
 filename "chapter-3.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Conclusion
+status open
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "conclusion.lyx"
 
 \end_inset
 

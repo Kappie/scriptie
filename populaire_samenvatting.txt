@@ -1,0 +1,7 @@
+Het Lieb-Linigermodel beschrijft een gas van deeltjes in één dimensie --- knikkertjes op een lijn. Toen het model in 1963 bedacht werd had het nog geen praktische toepassingen. Het was interessant omdat het wiskundig exact oplosbaar bleek te zijn. Je kunt het systeem beschrijven zonder benaderingen te maken, en dat is voor maar weinig systemen zo.
+
+Het model wordt beschreven door de quantummechanica, die natuurkundigen al een eeuw versteld doet staan. "I can safely say that nobody understands quantum mechanics," zei de nobelprijswinnaar Richard Feynman. Want hoewel we botsende knikkertjes voor ons zien, doen deeltjes op kleine schaal hele andere dingen. Als je bijvoorbeeld één deeltje extra op de lijn plaatst, wordt de snelheid van alle andere deeltjes beïnvloed.
+
+Juist over dit quantummechanische gedrag gaat dit onderzoek. Waar houdt het tegenintuïtieve gedrag op en zien we de normale, klassieke wereld weer terug? Als het goed is zie je bij een systeem met 100 deeltjes sterke quantummechanische effecten, maar zijn deze effecten bij een systeem met 10^23 deeltjes verdwenen.
+
+In 2004 is het experimentatoren gelukt om het model in het echt te bouwen. Met behulp van laserstralen van meerdere kanten konden ze de beweegruimte van deeltjes in een gas beperken tot een lijn. De eendimensionale quantummechanica is een veelbelovend onderzoeksgebied en staat weer helemaal in de belangstelling. 
