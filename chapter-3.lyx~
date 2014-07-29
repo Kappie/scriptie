@@ -314,14 +314,64 @@ reference "fig:Notch-depth-decay"
 \end_layout
 
 \begin_layout Standard
-First, we will approximate this double sum as a double integral.
+Remember that 
+\begin_inset Formula $P=\frac{2\pi p}{L}$
+\end_inset
+
+, the dressed momentum of the state 
+\begin_inset Formula $|P\rangle.$
+\end_inset
+
+ First, we will approximate this double sum as a double integral.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\frac{1}{N}\sum_{p,p=-N}^{N}\langle P|\hat{\rho}(0)|P'\rangle e^{i(P-P')x-i(E_{p}-E_{p'})t}=\frac{1}{N}\int_{\mathbb{R}^{2}}dpdp'A_{p}A_{p'}e^{-iE(p)t}e^{iE(p')t}\label{eq:double_density_integral}
+\frac{1}{N}\sum_{p,p=-N}^{N}\langle P|\hat{\rho}(0)|P'\rangle e^{i(P-P')x-i(E_{p}-E_{p'})t}=\frac{1}{N}\int_{-N}^{N}\int_{-N}^{N}dpdp'\langle P|\hat{\rho}(0)|P'\rangle e^{iPx-iP'x}e^{-iE(p)t+iE(p')t}\label{eq:a}
 \end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, a change to integration variables 
+\begin_inset Formula $P=\frac{2\pi p}{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $P'=\frac{2\pi p'}{L}$
+\end_inset
+
+ yields:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{L^{2}}{4\pi^{2}N}\int_{-\frac{2\pi N}{L}}^{\frac{2\pi N}{L}}\int_{-\frac{2\pi N}{L}}^{\frac{2\pi N}{L}}dPdP'\langle P|\hat{\rho}(0)|P'\rangle e^{iPx-iP'x}e^{-iE(P)t+iE(P')t}\label{eq:double_density_integral}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because we work at unit filling (
+\begin_inset Formula $\frac{N}{L}=1$
+\end_inset
+
+), we get:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{L}{4\pi^{2}}\int_{-2\pi}^{2\pi}\int_{-2\pi}^{2\pi}dPdP'\langle P|\hat{\rho}(0)|P'\rangle e^{iPx-iP'x}e^{-iE(P)t+iE(P')t}
+\]
 
 \end_inset
 
@@ -479,11 +529,11 @@ Now we will use a stationary phase approximation to show that the notch
 \end_inset
 
 .
- 
+ We start with 
 \begin_inset Formula $\ref{eq:double_density_integral}$
 \end_inset
 
- consists of two integrals of the form:
+:
 \end_layout
 
 \begin_layout Standard
@@ -696,7 +746,22 @@ Since we are left with an integral that does not depend on
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula $\ref{fig:numerical_fit}$
+\end_inset
 
+ shows a fit to the model 
+\begin_inset Formula $\frac{A}{t+B}$
+\end_inset
+
+, characterized by the parameters 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -737,6 +802,13 @@ Fit to numerically calculated values of the notch depth for
 \end_inset
 
  times the original depth have been taken into account.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:numerical_fit"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

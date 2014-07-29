@@ -907,7 +907,19 @@ to shift the eigenstates
 \end_layout
 
 \begin_layout Standard
-The form factors 
+Here, 
+\begin_inset Formula $P=\frac{2\pi p}{L}$
+\end_inset
+
+, from 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dressed_momentum"
+
+\end_inset
+
+.
+ The form factors 
 \begin_inset Formula $\langle P|\hat{\rho}(0)|P\rangle$
 \end_inset
 

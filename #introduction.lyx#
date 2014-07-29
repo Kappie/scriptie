@@ -284,6 +284,36 @@ Introduction
 \end_layout
 
 \begin_layout Standard
+Het Lieb Liniger bestaat al sinds...
+ , recent experimentele realisatie.
+\end_layout
+
+\begin_layout Standard
+Het is speciaal dat een quantumsysteem exact oplosbaar is.
+\end_layout
+
+\begin_layout Standard
+A recent article (Japanese) drew attention...
+\end_layout
+
+\begin_layout Standard
+Hoe vervalt dit quasi deeltje, is het klassiek? Strongly interacting...
+\end_layout
+
+\begin_layout Standard
+The paper is organized as follows...
+\end_layout
+
+\begin_layout Standard
+Relaxation
+\end_layout
+
+\begin_layout Standard
+"it provides exact wavefunctions for any state in the Hilbert space, irrespectiv
+e of its energy."
+\end_layout
+
+\begin_layout Standard
 A recent article 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -291,9 +321,14 @@ key "Japanese1"
 
 \end_inset
 
- drew attention to the dynamics of a quasi particle initial state in the
- one dimensional ultra cold Bose gas, described by the Lieb-Liniger model.
- In this report, I have reproduced the results of this article and 
+ drew attention to the dynamics of a quasi particle initial state in a one
+ dimensional ultra cold Bose gas, described by the Lieb-Liniger model.
+ Using this initial state, it was demonstrated that 
+\end_layout
+
+\begin_layout Standard
+In this report, I have reproduced the results of this article and investigated
+ the dynamics more thoroughly.
 \end_layout
 
 \begin_layout Standard

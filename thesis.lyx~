@@ -152,7 +152,7 @@ customHeadersFooters
 \color #faf0e6
 \end_branch
 \branch pop sam
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -502,7 +502,7 @@ filename "Summary.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch pop sam
+\begin_inset Branch Summary
 status open
 
 \begin_layout Standard
@@ -517,6 +517,10 @@ filename "populaire_samenvatting.lyx"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 

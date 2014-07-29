@@ -1,0 +1,9 @@
+Introduced in 1963, the Lieb-Liniger model was initially only of academic interest. The Lieb-Liniger model is one of the precious few many-body systems that can be solved exactly. It exhibits strongly coupled behaviour, customary to such one dimensional models. For example, if one particle is added to the gas, the momenta of all the other particles change. A big question is when those quantum effects give way to classical behaviour.
+
+A recent article [Japanese1] drew attention to the dynamics of a quasi particle initial state in a one dimensional ultra cold Bose gas, described by the Lieb-Liniger model. In their report, Kaminishi et al. demonstrate that this quasi particle shows classical relaxation behaviour. However, a specific relation for this relaxation process is not given. 
+
+In my report, I set out to further investigate the relaxation behaviour of this quasi-particle initial state.
+
+The paper is organized as follows. First, the Lieb Liniger model will be described, as well as the Bethe ansatz for solving it. The expectation value for basic quantities such as energy and momentum is calculated. Then, I will introduce the quasi-particle initial state. Then, the time evolution of the density profile is given, reproducing the results of Kaminishi et al. In the final chapter, simulations show that the relaxation process is a 1/t relationship, and using the stationary phase approximation, this fact is also deduced directly. Parameters are given that characterize this behaviour.
+
+
