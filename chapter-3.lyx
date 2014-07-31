@@ -322,7 +322,79 @@ Remember that
 \begin_inset Formula $|P\rangle.$
 \end_inset
 
+ We split the sum into to parts, as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{N}\sum_{p=-N}^{N}\langle P|\hat{\rho}(0)|P\rangle+\frac{1}{N}\sum_{p\neq p'}\langle P|\hat{\rho}(0)|P'\rangle e^{i(P-P')x-i(E_{p}-E_{p'})t}\label{eq:density_sum_split}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The diagonal matrix elements 
+\begin_inset Formula $\langle P|\hat{\rho(0)|P'\rangle}$
+\end_inset
+
+ are equal to the particle density 
+\begin_inset Formula $n=\frac{N}{L}=1$
+\end_inset
+
+.
+ For the left sum, we get 
+\begin_inset Formula $\frac{2N+1}{N}=2+\frac{1}{N}$
+\end_inset
+
+, which is the background (equilibrium) density observed in the simulations.
+\end_layout
+
+\begin_layout Standard
+We will now focus on the right sum of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:density_sum_split"
+
+\end_inset
+
+, which will yield the 
+\begin_inset Formula $\frac{1}{t}$
+\end_inset
+
+ decay behaviour.
  First, we will approximate this double sum as a double integral.
+ We do this by taking the thermodynamic limit (
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+, 
+\begin_inset Formula $L\rightarrow\infty$
+\end_inset
+
+).
+ The dressed momentum now becomes dense.
+ The form factors 
+\begin_inset Formula $\langle P|\hat{\rho}(0)\hat{|P'\rangle}$
+\end_inset
+
+ are given by a smooth function of 
+\begin_inset Formula $P$
+\end_inset
+
+ and 
+\begin_inset Formula $P'$
+\end_inset
+
+, except at points where 
+\begin_inset Formula $P=P'$
+\end_inset
+
+, which we filtered out.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -337,7 +409,12 @@ Remember that
 \end_layout
 
 \begin_layout Standard
-Now, a change to integration variables 
+Since we are summing over integers, the 
+\begin_inset Formula $\Delta p$
+\end_inset
+
+ element is 1, and we do not get any extra factor in the integral expression.
+ Now, a change to integration variables 
 \begin_inset Formula $P=\frac{2\pi p}{L}$
 \end_inset
 
@@ -351,7 +428,7 @@ Now, a change to integration variables
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\frac{L^{2}}{4\pi^{2}N}\int_{-\frac{2\pi N}{L}}^{\frac{2\pi N}{L}}\int_{-\frac{2\pi N}{L}}^{\frac{2\pi N}{L}}dPdP'\langle P|\hat{\rho}(0)|P'\rangle e^{iPx-iP'x}e^{-iE(P)t+iE(P')t}\label{eq:double_density_integral}
+\frac{L^{2}}{4\pi^{2}N}\int_{-\frac{2\pi N}{L}}^{\frac{2\pi N}{L}}\int_{-\frac{2\pi N}{L}}^{\frac{2\pi N}{L}}dPdP'\langle P|\hat{\rho}(0)|P'\rangle e^{iPx-iP'x}e^{-iE(P)t+iE(P')t}\label{eq:double_density_integral_general}
 \end{equation}
 
 \end_inset
@@ -369,9 +446,9 @@ Because we work at unit filling (
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\frac{L}{4\pi^{2}}\int_{-2\pi}^{2\pi}\int_{-2\pi}^{2\pi}dPdP'\langle P|\hat{\rho}(0)|P'\rangle e^{iPx-iP'x}e^{-iE(P)t+iE(P')t}
-\]
+\begin{equation}
+\frac{L}{4\pi^{2}}\int_{-2\pi}^{2\pi}\int_{-2\pi}^{2\pi}dPdP'\langle P|\hat{\rho}(0)|P'\rangle e^{iPx-iP'x}e^{-iE(P)t+iE(P')t}\label{eq:double_density_integral}
+\end{equation}
 
 \end_inset
 
@@ -548,7 +625,30 @@ Now we will use a stationary phase approximation to show that the notch
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Energy-spectrum"
 
+\end_inset
+
+ shows that 
+\begin_inset Formula $E(p)$
+\end_inset
+
+ has two dominant frequencies at which 
+\begin_inset Formula $\frac{dE}{dp}=0$
+\end_inset
+
+.
+ We label the corresponding dressed momenta 
+\begin_inset Formula $P_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{-}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -556,10 +656,6 @@ Now we will use a stationary phase approximation to show that the notch
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -603,39 +699,103 @@ name "fig:Energy-spectrum"
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Energy-spectrum"
-
+This means the integral has 4 contributing terms, with weights 
+\begin_inset Formula $\langle P_{+}|\hat{\rho}(0)|P_{+}\rangle$
 \end_inset
 
- shows that our oscillatory term 
-\begin_inset Formula $E(p)$
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\langle P_{+}|\hat{\rho}(0)|P_{-}\rangle$
 \end_inset
 
- has two dominant frequencies at which 
-\begin_inset Formula $\frac{dE}{dp}=0$
-\end_inset
-
-.
- We label them 
-\begin_inset Formula $p_{+}$
+, 
+\begin_inset Formula $\langle P_{-}|\hat{\rho}(0)|P_{+}\rangle$
 \end_inset
 
  and 
-\begin_inset Formula $p_{-}$
+\begin_inset Formula $\langle P_{-}|\hat{\rho}(0)|P_{-}\rangle$
 \end_inset
 
 .
- We will focus on the frequency 
-\begin_inset Formula $p_{+}$
+ In the limit 
+\begin_inset Formula $c\rightarrow\infty$
 \end_inset
 
- and keep in mind that the reasoning for 
-\begin_inset Formula $p_{-}$
+, form factors 
+\begin_inset Formula $\langle P|\hat{\rho}(0)|P'\rangle$
 \end_inset
 
- is analogous.
+ have a value of 
+\begin_inset Formula $\frac{1}{L}$
+\end_inset
+
+ when the states 
+\begin_inset Formula $P$
+\end_inset
+
+ and 
+\begin_inset Formula $P'$
+\end_inset
+
+ differ by one k-number, as is the case for all form factors that consist
+ of one-hole excitations that both have positive momentum or both have negative
+ momentum.
+ 
+\begin_inset Formula $\langle P|\hat{\rho}(0)|P'\rangle=0$
+\end_inset
+
+ when the states 
+\begin_inset Formula $P$
+\end_inset
+
+ and 
+\begin_inset Formula $P'$
+\end_inset
+
+ differ by two k-numbers, which happens for form factors that consist of
+ a one-hole excitation with negative momentum and a one-hole excitation
+ with positive momentum.
+ Of the 4 contributing terms, 
+\begin_inset Formula $\langle P_{+}|\hat{\rho}(0)|P_{+}\rangle$
+\end_inset
+
+ and 
+\begin_inset Formula $\langle P_{-}|\hat{\rho}(0)|P_{-}\rangle$
+\end_inset
+
+ give 
+\begin_inset Formula $\frac{1}{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $\langle P_{+}|\hat{\rho}(0)|P_{-}\rangle$
+\end_inset
+
+ and 
+\begin_inset Formula $\langle P_{-}|\hat{\rho}(0)|P_{+}\rangle$
+\end_inset
+
+ give 0.
+ We focus on the 
+\begin_inset Formula $\langle P_{+}|\hat{\rho}(0)|P_{+}\rangle$
+\end_inset
+
+ term and will later see that the 
+\begin_inset Formula $\langle P_{-}|\hat{\rho}(0)|P_{-}\rangle$
+\end_inset
+
+ term is analogous.
 \end_layout
 
 \begin_layout Standard
@@ -644,7 +804,7 @@ We expand
 \end_inset
 
  about 
-\begin_inset Formula $p=p_{+}$
+\begin_inset Formula $P=P_{+}$
 \end_inset
 
  to second order:
@@ -653,7 +813,7 @@ We expand
 \begin_layout Standard
 \begin_inset Formula 
 \[
-E(p)\approx E(p_{+})+\frac{1}{2}\frac{d^{2}E}{dp^{2}}(p_{+})(p-p_{+})^{2}\equiv E(p_{+})+\frac{1}{2}\alpha(p_{L}-p)^{2}
+E(p)\approx E(P_{+})+\frac{1}{2}\frac{d^{2}E}{dp^{2}}(P_{+})(P-P_{+})^{2}\equiv E(P_{+})+\frac{1}{2}\alpha(P_{+}-P)^{2}
 \]
 
 \end_inset
@@ -667,13 +827,13 @@ Here, we have defined
 \end_inset
 
 .
- We now have the integral:
+ We approximate the original integral as:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\int_{\mathbb{R}}dpA(p_{+})e^{it[E(p_{+})+\frac{1}{2}\alpha(p-p_{+})^{2}]}=\#\int_{\mathbb{R}}dpe^{\frac{it\alpha}{2}p{}^{2}}
+\frac{L\langle P_{+}|\hat{\rho}(0)|P_{+}\rangle}{4\pi^{2}}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}dPdP'e^{-it[E(P_{+})+\frac{1}{2}\alpha(P-P_{+})^{2}]+iPx}e^{it[E(P_{+})+\frac{1}{2}\alpha(P'-P_{+})^{2}]-iP'x}
 \]
 
 \end_inset
@@ -682,30 +842,30 @@ Here, we have defined
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\#$
-\end_inset
-
- denotes different real numbers that are not important in our reasoning.
- In the second step, we shifted the integral from 
-\begin_inset Formula $p-p_{L}$
+We have extended the limits of both integrals from 
+\begin_inset Formula $-\infty$
 \end_inset
 
  to 
-\begin_inset Formula $p$
+\begin_inset Formula $\infty$
+\end_inset
+
+, which is justified in the limit 
+\begin_inset Formula $t\rightarrow\infty$
 \end_inset
 
 .
- Now a rescaling 
-\begin_inset Formula $\bar{p}=p\sqrt{\alpha t}$
+ Now, we insert 
+\begin_inset Formula $\langle P_{+}|\hat{\rho}(0)|P_{+}\rangle=\frac{1}{L}$
 \end_inset
 
- yields:
+ and observe that the two integrals are eachother's complex conjugate:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{\#}{\sqrt{t}}\int_{\mathbb{R}}d\bar{p}e^{\frac{i}{2}\bar{p}^{2}}
+\frac{1}{4\pi^{2}}\left|\int_{-\infty}^{\infty}dPe^{-it[E(P_{+})+\frac{1}{2}\alpha(P-P_{+})^{2}]+iPx}\right|^{2}
 \]
 
 \end_inset
@@ -714,32 +874,292 @@ Here, we have defined
 \end_layout
 
 \begin_layout Standard
-Since we are left with an integral that does not depend on 
-\begin_inset Formula $t$
+\begin_inset Formula $e^{-itE(P_{+})}$
 \end_inset
 
-, we can conclude that our original expression, 
-\begin_inset Formula $\ref{eq:momentum_integral}$
+ simply disappears as a phase.
+ In order to shift variables 
+\begin_inset Formula $\tilde{P}=P-P_{+}$
 \end_inset
 
-, has a 
-\begin_inset Formula $\frac{1}{\sqrt{t}}$
+, we multiply with 
+\begin_inset Formula $e^{iP_{+}x}e^{-iP_{+}x}$
 \end_inset
 
- dependence.
- The expression for the density,
-\begin_inset Formula $\ref{eq:double_density_integral}$
+, yielding:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{4\pi^{2}}\left|e^{iP_{+}x}\int_{-\infty}^{\infty}dPe^{-it\frac{1}{2}\alpha(P-P_{+})^{2}+i(P-P_{+})x}\right|^{2}
+\]
+
 \end_inset
 
- consists of two such integrals, so we expect the density to decay as 
-\begin_inset Formula $\frac{1}{t}$
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $e^{iP_{+}x}$
 \end_inset
 
- in the large 
-\begin_inset Formula $t$
+ also disappears and we shift variables (renaming 
+\begin_inset Formula $\tilde{P}$
 \end_inset
 
- limit.
+ back to 
+\begin_inset Formula $P$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{4\pi^{2}}\left|\int_{-\infty}^{\infty}dPe^{-it\frac{1}{2}\alpha P{}^{2}+iPx}\right|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This integrates to:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{4\pi^{2}}\left|\frac{e^{\frac{ix^{2}}{4t\alpha}}\sqrt{2\pi}}{\sqrt{it\alpha}}\right|^{2}=\frac{1}{2\pi\alpha}\frac{1}{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the contribution for 
+\begin_inset Formula $\langle P_{-}|\hat{\rho}(0)|P_{-}\rangle$
+\end_inset
+
+ is completely analogous, we can double this value to obtain:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{\pi\alpha}\frac{1}{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{\pi\alpha}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.490782
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.648577
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.697912
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.456089
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.98428
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.323394
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1.30253
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.244378
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The values of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ have been found by fitting to 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Energy-spectrum"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -754,7 +1174,7 @@ Since we are left with an integral that does not depend on
 \end_inset
 
  shows a fit to the model 
-\begin_inset Formula $\frac{A}{t+B}$
+\begin_inset Formula $d=\frac{A}{t+B}$
 \end_inset
 
 , characterized by the parameters 
@@ -801,7 +1221,7 @@ Fit to numerically calculated values of the notch depth for
 \begin_inset Formula $t$
 \end_inset
 
- for which the peak is smaller than 
+ for which the notch is smaller than 
 \begin_inset Formula $\frac{1}{e}$
 \end_inset
 
