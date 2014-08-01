@@ -296,9 +296,15 @@ Introduced in 1963, the Lieb-Liniger model was initially only of academic
 \end_layout
 
 \begin_layout Standard
-A recent article [Japanese1] drew attention to the dynamics of a quasi particle
- initial state in a one dimensional ultra cold Bose gas, described by the
- Lieb-Liniger model.
+A recent article 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Japanese1"
+
+\end_inset
+
+ drew attention to the dynamics of a quasi particle initial state in a one
+ dimensional ultra cold Bose gas, described by the Lieb-Liniger model.
  In their report, Kaminishi et al.
  demonstrate that this quasi particle shows classical relaxation behaviour.
  However, a specific relation for this relaxation process is not given.

@@ -961,9 +961,32 @@ Since the contribution for
 \end_layout
 
 \begin_layout Standard
+In this approximation, the value of the density (irrespective of x) takes
+ the form:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\rho(t)=2+\frac{1}{N}+\frac{1}{\pi\alpha}\frac{1}{t}\label{eq:density_decay_approximation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="2">
+<lyxtabular version="3" rows="6" columns="3">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <row>
@@ -979,11 +1002,23 @@ Since the contribution for
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{\pi\alpha}$
 \end_inset
 
 
@@ -1002,11 +1037,20 @@ Since the contribution for
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 -0.490782
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.648577
 \end_layout
 
 \end_inset
@@ -1022,11 +1066,20 @@ Since the contribution for
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.697912
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+-0.456089
 \end_layout
 
 \end_inset
@@ -1042,11 +1095,49 @@ Since the contribution for
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.98428
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+-0.323394
+\end_layout
 
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1.30253
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.244378
 \end_layout
 
 \end_inset
@@ -1057,7 +1148,16 @@ Since the contribution for
 \begin_inset Text
 
 \begin_layout Plain Layout
-8
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -1079,30 +1179,28 @@ Since the contribution for
 
 \end_layout
 
-\begin_layout Standard
-By fitting to 
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The values of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ have been found by fitting to 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Energy-spectrum"
 
 \end_inset
 
-, we find 
-\begin_inset Formula $\alpha\equiv\frac{d^{2}E}{dP^{2}}(P_{+})=\frac{d^{2}E}{dP^{2}}(P_{-})=-0.490782$
-\end_inset
-
- for 
-\begin_inset Formula $c=1$
-\end_inset
-
-, which gives us:
+.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\rho(x,t)=2+\frac{1}{N}-\frac{0.648577}{t}
-\]
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1121,7 +1219,7 @@ reference "fig:Energy-spectrum"
 \end_inset
 
  shows a fit to the model 
-\begin_inset Formula $\frac{A}{t+B}$
+\begin_inset Formula $d=\frac{A}{t+B}$
 \end_inset
 
 , characterized by the parameters 
@@ -1168,7 +1266,7 @@ Fit to numerically calculated values of the notch depth for
 \begin_inset Formula $t$
 \end_inset
 
- for which the peak is smaller than 
+ for which the notch is smaller than 
 \begin_inset Formula $\frac{1}{e}$
 \end_inset
 
@@ -1193,6 +1291,47 @@ name "fig:numerical_fit"
 \end_layout
 
 \begin_layout Standard
+Since the notch depth 
+\begin_inset Formula $d=2+\frac{1}{N}-\rho_{min}=\frac{A}{t+B}$
+\end_inset
+
+, we see that 
+\begin_inset Formula $\rho_{min}=2+\frac{1}{N}-\frac{A}{t+B}$
+\end_inset
+
+.
+ We obtained 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:density_decay_approximation"
+
+\end_inset
+
+ in the limit 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+, so the parameter 
+\series bold
+
+\begin_inset Formula $B$
+\end_inset
+
+ 
+\series default
+can be ignored.
+ The parameter 
+\begin_inset Formula $A$
+\end_inset
+
+ corresponds to 
+\begin_inset Formula $-\frac{1}{\pi\alpha}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
@@ -1200,8 +1339,9 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="3">
+<lyxtabular version="3" rows="6" columns="4">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -1224,11 +1364,23 @@ A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{1}{\pi\alpha}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1253,11 +1405,20 @@ B
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 0.958587
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.648577
 \end_layout
 
 \end_inset
@@ -1282,11 +1443,20 @@ B
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 0.517246
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.456089
 \end_layout
 
 \end_inset
@@ -1311,11 +1481,58 @@ B
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 0.32157
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.323394
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.524958
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.227496
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.244378
 \end_layout
 
 \end_inset
@@ -1326,7 +1543,7 @@ B
 \begin_inset Text
 
 \begin_layout Plain Layout
-8
+100
 \end_layout
 
 \end_inset
@@ -1335,7 +1552,16 @@ B
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.524958
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -1344,7 +1570,7 @@ B
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.227496
+
 \end_layout
 
 \end_inset

@@ -146,6 +146,16 @@ customHeadersFooters
 \filename_suffix 0
 \color #faf0e6
 \end_branch
+\branch Populaire samenvatting
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch pop sam
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -214,7 +224,7 @@ Geert Kapteijns (10246479)
 \end_layout
 
 \begin_layout Date
-Bachelor's thesis Natuur‐ en Sterrenkunde, 15 EC, 31‐03‐2014 - 12-07-2014 
+Bachelor's thesis Natuur‐ en Sterrenkunde, 15 EC, 31‐03‐2014 - 12-08-2014 
  
 \end_layout
 
@@ -480,6 +490,25 @@ status open
 \begin_inset CommandInset include
 LatexCommand include
 filename "Summary.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Summary
+status open
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "populaire_samenvatting.lyx"
 
 \end_inset
 

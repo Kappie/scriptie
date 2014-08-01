@@ -345,6 +345,13 @@ The diagonal matrix elements
 \begin_inset Formula $n=\frac{N}{L}=1$
 \end_inset
 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Slav89,Slav90,Kore93"
+
+\end_inset
+
 .
  For the left sum, we get 
 \begin_inset Formula $\frac{2N+1}{N}=2+\frac{1}{N}$
@@ -765,7 +772,14 @@ This means the integral has 4 contributing terms, with weights
 
  differ by two k-numbers, which happens for form factors that consist of
  a one-hole excitation with negative momentum and a one-hole excitation
- with positive momentum.
+ with positive momentum 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Slav89,Slav90,Kore93"
+
+\end_inset
+
+.
  Of the 4 contributing terms, 
 \begin_inset Formula $\langle P_{+}|\hat{\rho}(0)|P_{+}\rangle$
 \end_inset
@@ -961,6 +975,22 @@ Since the contribution for
 \end_layout
 
 \begin_layout Standard
+In this approximation, the value of the density (irrespective of x) takes
+ the form:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\rho(t)=2+\frac{1}{N}+\frac{1}{\pi\alpha}\frac{1}{t}\label{eq:density_decay_approximation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
@@ -968,7 +998,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="3">
+<lyxtabular version="3" rows="6" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -1099,7 +1129,7 @@ status open
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1108,7 +1138,7 @@ status open
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1117,11 +1147,40 @@ status open
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 -0.244378
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1.92191
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.165621
 \end_layout
 
 \end_inset
@@ -1246,6 +1305,63 @@ name "fig:numerical_fit"
 \end_layout
 
 \begin_layout Standard
+Since the notch depth 
+\begin_inset Formula $d=2+\frac{1}{N}-\rho_{min}=\frac{A}{t+B}$
+\end_inset
+
+, we see that 
+\begin_inset Formula $\rho_{min}=2+\frac{1}{N}-\frac{A}{t+B}$
+\end_inset
+
+.
+ We obtained 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:density_decay_approximation"
+
+\end_inset
+
+ in the limit 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+, so the parameter 
+\series bold
+
+\begin_inset Formula $B$
+\end_inset
+
+ 
+\series default
+can be ignored.
+ The parameter 
+\begin_inset Formula $A$
+\end_inset
+
+ corresponds to 
+\begin_inset Formula $-\frac{1}{\pi\alpha}$
+\end_inset
+
+.
+ We used values of the form factors in the limit 
+\begin_inset Formula $c\rightarrow\infty$
+\end_inset
+
+, hence only at 
+\begin_inset Formula $c=100$
+\end_inset
+
+ does 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:density_decay_approximation"
+
+\end_inset
+
+ give a good approximation.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
@@ -1253,8 +1369,9 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="3">
+<lyxtabular version="3" rows="6" columns="4">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -1277,11 +1394,23 @@ A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{1}{\pi\alpha}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1306,11 +1435,20 @@ B
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 0.958587
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.648577
 \end_layout
 
 \end_inset
@@ -1335,11 +1473,20 @@ B
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 0.517246
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.456089
 \end_layout
 
 \end_inset
@@ -1364,11 +1511,58 @@ B
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 0.32157
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.323394
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.524958
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.227496
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.244378
 \end_layout
 
 \end_inset
@@ -1379,7 +1573,7 @@ B
 \begin_inset Text
 
 \begin_layout Plain Layout
-8
+100
 \end_layout
 
 \end_inset
@@ -1388,7 +1582,16 @@ B
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.524958
+0.160359
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.119056
 \end_layout
 
 \end_inset
@@ -1397,7 +1600,7 @@ B
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.227496
+0.165621
 \end_layout
 
 \end_inset

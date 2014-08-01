@@ -284,8 +284,8 @@ Description of the Lieb-Liniger model
 \end_layout
 
 \begin_layout Standard
-I have studied the Lieb-Liniger model, a model of particles that can move
- in one dimension.
+We will describe an ultra cold Bose gas in one dimension with the Lieb-Liniger
+ model.
  This is the Hamiltonian in the appropriate units:
 \end_layout
 
@@ -840,18 +840,6 @@ P=\frac{2\pi}{L}\sum_{j=1}^{N}I_{j}\label{eq:momentum}
 
 \begin_layout Section
 The ground state
-\end_layout
-
-\begin_layout Standard
-TODO:
-\end_layout
-
-\begin_layout Standard
-- No degeneracy means no level crossing because...?
-\end_layout
-
-\begin_layout Standard
-------------------------------------------------------------------
 \end_layout
 
 \begin_layout Standard

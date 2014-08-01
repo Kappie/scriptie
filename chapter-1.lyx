@@ -656,7 +656,7 @@ Here,
 \end_inset
 
  can be derived in the same way as the two particle case (by using the discontin
-uity in the derivate of 
+uity in the derivative of 
 \begin_inset Formula $\Psi$
 \end_inset
 
@@ -840,18 +840,6 @@ P=\frac{2\pi}{L}\sum_{j=1}^{N}I_{j}\label{eq:momentum}
 
 \begin_layout Section
 The ground state
-\end_layout
-
-\begin_layout Standard
-TODO:
-\end_layout
-
-\begin_layout Standard
-- No degeneracy means no level crossing because...?
-\end_layout
-
-\begin_layout Standard
-------------------------------------------------------------------
 \end_layout
 
 \begin_layout Standard
